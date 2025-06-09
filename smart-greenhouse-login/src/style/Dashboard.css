@@ -1,0 +1,158 @@
+/* Dashboard.css */
+.graph-image {
+  width: 100%;
+  /* max-width: 400px; */
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+ .sidebar {
+    background-color: #1c1c1c;  
+    color: #ffffff;
+  } 
+  
+  
+  .sidebar ul {
+    list-style: none;
+  }
+  
+  .sidebar li {
+    margin-bottom: 1rem;
+  }
+  
+  .sidebar ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 500;
+  }
+  
+  .sidebar ul li a.active {
+    color: #00c8ff;
+    border-radius: 8px;
+  }
+  
+  
+  .content {
+    gap: 5%;
+    flex-wrap: wrap;
+  }
+  
+  .live-data, .actuators {
+    flex: 1;
+  }
+  
+  .card {
+    background-color: #1e1e1e;
+    padding: 3% 4%;
+    margin-bottom: 4%;
+  }
+  
+  .status.on {
+    color: green;
+    font-weight: bold;
+  }
+  
+  .alert {
+    color: red !important;
+    padding: 3% 4%;
+    border-radius: 10px;
+    font-weight: bold;
+  }
+  
+  .action-button {
+    color: #00c8ff;
+    border: 1px solid #00c8ff;
+    padding: 2%;
+    border-radius: 8px;
+    margin-top: 2%;
+    display: block;
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+  }
+  
+  .plant-image {
+    margin-top: 5%;
+    border-radius: 12px;
+  }
+
+  .modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .modal-content {
+    position: relative;
+    background: white;
+    padding: 1rem;
+    border-radius: 12px;
+    max-width: 90%;
+    max-height: 90%;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  }
+  
+  .modal-image {
+    max-width: 100%;
+    max-height: 80vh;
+    border-radius: 8px;
+  }
+  
+  .close-button {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background: red;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 28px;
+    height: 28px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .clickable {
+    cursor: pointer;
+    transition: transform 0.2s;
+  }
+  
+  .clickable:hover {
+    transform: scale(1.03);
+  }
+
+  .status.off {
+  color: red;
+  font-weight: bold;
+}
+.action-button {
+  color: #00c8ff;
+  border: 1px solid #00c8ff;
+  padding: 2%;
+  border-radius: 8px;
+  margin-top: 2%;
+  display: block;
+  width: 100%;
+  text-align: center;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.1s, box-shadow 0.1s;
+}
+
+.action-button:active {
+  transform: scale(0.95);
+  box-shadow: inset 0 0 5px rgba(0, 200, 255, 0.5);
+}
+
+
+.taille_affichee{
+    width: 200px;
+    height: 200px;
+}

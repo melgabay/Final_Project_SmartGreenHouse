@@ -1,0 +1,7 @@
+venv/
+*.dylib
+*.h5
+.DS_Store
+node_modules/
+__pycache__/
+.ipynb_checkpoints/

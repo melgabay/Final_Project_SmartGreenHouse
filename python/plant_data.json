@@ -1,0 +1,401 @@
+{
+  "Corn": [
+    {
+      "date": "2025-06-06T10:44:52.647822",
+      "file_name_image": "plant_images/plant12.jpeg",
+      "size_compare": {
+        "current_day_px": 12565,
+        "growth": 0
+      },
+      "deasese_class": {
+        "id": 10,
+        "name": "Corn___Northern_Leaf_Blight"
+      }
+    },
+    {
+      "date": "2025-06-07T18:28:08.342693",
+      "file_name_image": "plant_images/plant1.jpg",
+      "size_compare": {
+        "current_day_px": 238590,
+        "growth": -1
+      },
+      "deasese_class": {
+        "id": 10,
+        "name": "Corn___Northern_Leaf_Blight"
+      }
+    },
+    {
+      "date": "2025-06-07T18:28:08.377867",
+      "file_name_image": "plant_images/plant10.jpeg",
+      "size_compare": {
+        "current_day_px": 41170,
+        "growth": 1
+      },
+      "deasese_class": {
+        "id": 7,
+        "name": "Corn___Cercospora_leaf_spot Gray_leaf_spot"
+      }
+    },
+    {
+      "date": "2025-06-07T18:28:08.406005",
+      "file_name_image": "/plant_images/plant11.jpeg",
+      "size_compare": {
+        "current_day_px": 26878,
+        "growth": -1
+      },
+      "deasese_class": {
+        "id": 10,
+        "name": "Corn___Northern_Leaf_Blight"
+      }
+    },
+    {
+      "date": "2025-06-07T18:28:08.431301",
+      "file_name_image": "plant_images/plant12.jpeg",
+      "size_compare": {
+        "current_day_px": 12565,
+        "growth": -1
+      },
+      "deasese_class": {
+        "id": 10,
+        "name": "Corn___Northern_Leaf_Blight"
+      }
+    },
+    {
+      "date": "2025-06-07T18:28:08.624561",
+      "file_name_image": "plant_images/plant2.jpeg",
+      "size_compare": {
+        "current_day_px": 8800,
+        "growth": -1
+      },
+      "deasese_class": {
+        "id": 10,
+        "name": "Corn___Northern_Leaf_Blight"
+      }
+    },
+    {
+      "date": "2025-06-07T18:28:08.701896",
+      "file_name_image": "plant_images/plant22.jpeg",
+      "size_compare": {
+        "current_day_px": 2593,
+        "growth": -1
+      },
+      "deasese_class": {
+        "id": 8,
+        "name": "Corn___Common_rust"
+      }
+    },
+    {
+      "date": "2025-06-07T18:28:08.810994",
+      "file_name_image": "plant_images/plant26.jpeg",
+      "size_compare": {
+        "current_day_px": 22279,
+        "growth": 1
+      },
+      "deasese_class": {
+        "id": 8,
+        "name": "Corn___Common_rust"
+      }
+    },
+    {
+      "date": "2025-06-07T18:28:08.916756",
+      "file_name_image": "plant_images/plant3.jpeg",
+      "size_compare": {
+        "current_day_px": 32914,
+        "growth": 1
+      },
+      "deasese_class": {
+        "id": 10,
+        "name": "Corn___Northern_Leaf_Blight"
+      }
+    },
+    {
+      "date": "2025-06-07T18:28:08.989280",
+      "file_name_image": "plant_images/plant4.jpeg",
+      "size_compare": {
+        "current_day_px": 40083,
+        "growth": 1
+      },
+      "deasese_class": {
+        "id": 10,
+        "name": "Corn___Northern_Leaf_Blight"
+      }
+    },
+    {
+      "date": "2025-06-07T18:28:09.063390",
+      "file_name_image": "plant_images/plant9.jpeg",
+      "size_compare": {
+        "current_day_px": 33984,
+        "growth": -1
+      },
+      "deasese_class": {
+        "id": 10,
+        "name": "Corn___Northern_Leaf_Blight"
+      }
+    }
+  ],
+  "Tomato": [
+    {
+      "date": "2025-06-06T11:05:22.979800",
+      "file_name_image": "plant_images/plant13.jpeg",
+      "size_compare": {
+        "current_day_px": 27997,
+        "growth": 0
+      },
+      "deasese_class": {
+        "id": 29,
+        "name": "Tomato___Early_blight"
+      }
+    },
+    {
+      "date": "2025-06-07T18:28:08.298132",
+      "file_name_image": "plant_images/latest_plant.jpg",
+      "size_compare": {
+        "current_day_px": 27997,
+        "growth": 0
+      },
+      "deasese_class": {
+        "id": 29,
+        "name": "Tomato___Early_blight"
+      }
+    },
+    {
+      "date": "2025-06-07T18:28:08.455416",
+      "file_name_image": "plant_images/plant13.jpeg",
+      "size_compare": {
+        "current_day_px": 27997,
+        "growth": 0
+      },
+      "deasese_class": {
+        "id": 29,
+        "name": "Tomato___Early_blight"
+      }
+    },
+    {
+      "date": "2025-06-07T18:28:08.504957",
+      "file_name_image": "plant_images/plant15.jpeg",
+      "size_compare": {
+        "current_day_px": 11301,
+        "growth": -1
+      },
+      "deasese_class": {
+        "id": 29,
+        "name": "Tomato___Early_blight"
+      }
+    },
+    {
+      "date": "2025-06-07T18:28:08.576762",
+      "file_name_image": "plant_images/plant18.jpeg",
+      "size_compare": {
+        "current_day_px": 37847,
+        "growth": 1
+      },
+      "deasese_class": {
+        "id": 29,
+        "name": "Tomato___Early_blight"
+      }
+    },
+    {
+      "date": "2025-06-07T18:28:08.600442",
+      "file_name_image": "plant_images/plant19.jpeg",
+      "size_compare": {
+        "current_day_px": 18085,
+        "growth": -1
+      },
+      "deasese_class": {
+        "id": 29,
+        "name": "Tomato___Early_blight"
+      }
+    },
+    {
+      "date": "2025-06-07T18:28:08.672228",
+      "file_name_image": "plant_images/plant21.jpeg",
+      "size_compare": {
+        "current_day_px": 35593,
+        "growth": 1
+      },
+      "deasese_class": {
+        "id": 29,
+        "name": "Tomato___Early_blight"
+      }
+    },
+    {
+      "date": "2025-06-07T18:28:08.761149",
+      "file_name_image": "plant_images/plant24.jpg",
+      "size_compare": {
+        "current_day_px": 225622,
+        "growth": -1
+      },
+      "deasese_class": {
+        "id": 29,
+        "name": "Tomato___Early_blight"
+      }
+    },
+    {
+      "date": "2025-06-07T18:28:08.842605",
+      "file_name_image": "plant_images/plant27.jpeg",
+      "size_compare": {
+        "current_day_px": 5559,
+        "growth": -1
+      },
+      "deasese_class": {
+        "id": 29,
+        "name": "Tomato___Early_blight"
+      }
+    },
+    {
+      "date": "2025-06-07T18:28:08.892747",
+      "file_name_image": "plant_images/plant29.jpeg",
+      "size_compare": {
+        "current_day_px": 3543,
+        "growth": -1
+      },
+      "deasese_class": {
+        "id": 29,
+        "name": "Tomato___Early_blight"
+      }
+    },
+    {
+      "date": "2025-06-07T18:28:08.965857",
+      "file_name_image": "plant_images/plant31.jpeg",
+      "size_compare": {
+        "current_day_px": 6927,
+        "growth": 1
+      },
+      "deasese_class": {
+        "id": 29,
+        "name": "Tomato___Early_blight"
+      }
+    },
+    {
+      "date": "2025-06-07T18:28:09.039385",
+      "file_name_image": "plant_images/plant7.jpeg",
+      "size_compare": {
+        "current_day_px": 12096,
+        "growth": 1
+      },
+      "deasese_class": {
+        "id": 29,
+        "name": "Tomato___Early_blight"
+      }
+    }
+  ],
+  "Potato": [
+    {
+      "date": "2025-06-07T18:28:08.479925",
+      "file_name_image": "plant_images/plant14.jpeg",
+      "size_compare": {
+        "current_day_px": 15208,
+        "growth": 0
+      },
+      "deasese_class": {
+        "id": 21,
+        "name": "Potato___healthy"
+      }
+    }
+  ],
+  "Cherry": [
+    {
+      "date": "2025-06-07T18:28:08.528411",
+      "file_name_image": "plant_images/plant16.jpeg",
+      "size_compare": {
+        "current_day_px": 37624,
+        "growth": 0
+      },
+      "deasese_class": {
+        "id": 5,
+        "name": "Cherry___healthy"
+      }
+    }
+  ],
+  "Peach": [
+    {
+      "date": "2025-06-07T18:28:08.551753",
+      "file_name_image": "plant_images/plant17.jpeg",
+      "size_compare": {
+        "current_day_px": 17620,
+        "growth": 0
+      },
+      "deasese_class": {
+        "id": 17,
+        "name": "Peach___healthy"
+      }
+    },
+    {
+      "date": "2025-06-07T18:28:08.728064",
+      "file_name_image": "plant_images/plant23.jpeg",
+      "size_compare": {
+        "current_day_px": 37677,
+        "growth": 1
+      },
+      "deasese_class": {
+        "id": 17,
+        "name": "Peach___healthy"
+      }
+    },
+    {
+      "date": "2025-06-07T18:28:08.786733",
+      "file_name_image": "plant_images/plant25.jpeg",
+      "size_compare": {
+        "current_day_px": 15364,
+        "growth": -1
+      },
+      "deasese_class": {
+        "id": 17,
+        "name": "Peach___healthy"
+      }
+    },
+    {
+      "date": "2025-06-07T18:28:08.867612",
+      "file_name_image": "plant_images/plant28.jpeg",
+      "size_compare": {
+        "current_day_px": 19131,
+        "growth": 1
+      },
+      "deasese_class": {
+        "id": 17,
+        "name": "Peach___healthy"
+      }
+    },
+    {
+      "date": "2025-06-07T18:28:08.940396",
+      "file_name_image": "plant_images/plant30.jpeg",
+      "size_compare": {
+        "current_day_px": 19898,
+        "growth": 1
+      },
+      "deasese_class": {
+        "id": 17,
+        "name": "Peach___healthy"
+      }
+    }
+  ],
+  "Squash": [
+    {
+      "date": "2025-06-07T18:28:08.648479",
+      "file_name_image": "plant_images/plant20.jpeg",
+      "size_compare": {
+        "current_day_px": 8738,
+        "growth": 0
+      },
+      "deasese_class": {
+        "id": 25,
+        "name": "Squash___Powdery_mildew"
+      }
+    }
+  ],
+  "Apple": [
+    {
+      "date": "2025-06-07T18:28:09.012439",
+      "file_name_image": "plant_images/plant6.jpeg",
+      "size_compare": {
+        "current_day_px": 22066,
+        "growth": 0
+      },
+      "deasese_class": {
+        "id": 2,
+        "name": "Apple___Cedar_apple_rust"
+      }
+    }
+  ]
+}
+
