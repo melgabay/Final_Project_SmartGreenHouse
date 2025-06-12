@@ -87,11 +87,23 @@ export default function Settings() {
             <h2>Schedule</h2>
             <div className="setting-item">
               Watering
-              <input type="time" value={wateringTime} onChange={e => setWateringTime(e.target.value)} />
+              <input type="time" value={wateringTime} onChange={e => setWateringTime(e.target.value)}/>
             </div>
             <div className="setting-item">
               Lighting
-              <input type="time" value={lightingTime} onChange={e => setLightingTime(e.target.value)} />
+              <input type="time" value={lightingTime} onChange={e => setLightingTime(e.target.value)}/>
+            </div>
+          </section>
+
+          <section className="sect schedule">
+            <h2>Schedule</h2>
+            <div className="setting-item">
+              Light
+              <input type="time" value={wateringTime} onChange={e => setWateringTime(e.target.value)}/>
+            </div>
+            <div className="setting-item">
+              Lighting
+              <input type="time" value={lightingTime} onChange={e => setLightingTime(e.target.value)}/>
             </div>
           </section>
 
@@ -100,7 +112,7 @@ export default function Settings() {
             <h2>Plant Profile</h2>
             <select value={plantProfile} onChange={e => setPlantProfile(e.target.value)}>
               {plantProfiles.map(profile => (
-                <option key={profile} value={profile}>{profile}</option>
+                  <option key={profile} value={profile}>{profile}</option>
               ))}
             </select>
             <div className="current-plant mt-2">
@@ -115,11 +127,11 @@ export default function Settings() {
               <span>Notifications</span>
               <label className="switch">
                 <input
-                  type="checkbox"
-                  checked={notifications}
-                  onChange={() => setNotifications(!notifications)}
+                    type="checkbox"
+                    checked={notifications}
+                    onChange={() => setNotifications(!notifications)}
                 />
-                <span className="slider" />
+                <span className="slider"/>
               </label>
             </div>
 
@@ -131,11 +143,11 @@ export default function Settings() {
               <span>Storage</span>
               <label className="switch">
                 <input
-                  type="checkbox"
-                  checked={storage}
-                  onChange={() => setStorage(!storage)}
+                    type="checkbox"
+                    checked={storage}
+                    onChange={() => setStorage(!storage)}
                 />
-                <span className="slider" />
+                <span className="slider"/>
               </label>
             </div>
           </section>

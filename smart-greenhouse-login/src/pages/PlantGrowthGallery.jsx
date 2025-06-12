@@ -13,58 +13,62 @@ export default function PlantGrowthGallery() {
   const getPixelSize = (entry) =>
     entry?.size_compare?.current_day_px ?? null;
 
-  const fetchPlantData = async () => {
-    try {
-      const res = await axios.get('http://localhost:5500/api/plant-data');
-      const rawData = res.data;
+const fetchPlantData = async () => {
+  try {
+    const res = await axios.get('http://localhost:5500/api/plant-data');
+    const rawData = res.data;
 
-      const enrichedData = await Promise.all(
-        Object.entries(rawData).map(async ([plantName, entries]) => {
-          const entriesWithUrls = await Promise.all(
-            entries.map(async (entry) => {
-              if (!entry.file_name_image) return entry;
-              const res = await axios.get(`http://localhost:5500/api/s3url?key=${entry.file_name_image}`);
-              return { ...entry, image_url: res.data.url };
-            })
-          );
+    const enrichedData = await Promise.all(
+      Object.entries(rawData).map(async ([plantName, entries]) => {
+        const entriesWithUrls = await Promise.all(
+          entries.map(async (entry) => {
+            if (!entry.file_name_image) return entry;
+            const res = await axios.get(`http://localhost:5500/api/s3url?key=${entry.file_name_image}`);
+            return { ...entry, image_url: res.data.url };
+          })
+        );
 
-          entriesWithUrls.sort((a, b) => new Date(a.date) - new Date(b.date));
+        // Tri par date croissante
+        entriesWithUrls.sort((a, b) => new Date(a.date) - new Date(b.date));
 
-          const enriched = entriesWithUrls.map((entry, idx, arr) => {
-            const disease = getDiseaseName(entry);
-            const currentPx = getPixelSize(entry);
-            if (!disease || currentPx == null) {
-              return { ...entry, dynamic_growth: null };
-            }
+        let lastPx = null;
 
-            const previousEntry = [...arr.slice(0, idx)]
-              .reverse()
-              .find((e) => getDiseaseName(e) === disease && getPixelSize(e) != null);
+        const enriched = entriesWithUrls.map((entry) => {
+          const currentPx = getPixelSize(entry);
+          const disease = getDiseaseName(entry);
 
-            if (!previousEntry) return { ...entry, dynamic_growth: null };
+          if (currentPx == null) {
+            return { ...entry, dynamic_growth: null, plant_name: plantName };
+          }
 
-            const previousPx = getPixelSize(previousEntry);
-            const diff = currentPx - previousPx;
-            const percentage = previousPx ? (diff / previousPx) * 100 : 0;
+          let growthInfo = null;
 
-            return {
-              ...entry,
-              dynamic_growth: { diff, percentage, previous_px: previousPx },
-              plant_name: plantName
-            };
-          });
+          if (lastPx != null) {
+            const diff = currentPx - lastPx;
+            const percentage = lastPx ? (diff / lastPx) * 100 : 0;
+            growthInfo = { diff, percentage, previous_px: lastPx };
+          } else {
+            growthInfo = { previous_px: null }; // première image
+          }
 
-          return enriched;
-        })
-      );
+          lastPx = currentPx; // met à jour pour le prochain
+          return {
+            ...entry,
+            dynamic_growth: growthInfo,
+            plant_name: plantName
+          };
+        });
 
-      const flattened = enrichedData.flat();
-      setPlantData(flattened);
-    } catch (err) {
-      console.error('Error loading plant data and URLs:', err);
-    }
-  };
+        return enriched;
+      })
+    );
 
+    const flattened = enrichedData.flat();
+    setPlantData(flattened);
+  } catch (err) {
+    console.error('Error loading plant data and URLs:', err);
+  }
+};
   useEffect(() => {
     fetchPlantData();
     const interval = setInterval(fetchPlantData, 10000);
@@ -72,8 +76,8 @@ export default function PlantGrowthGallery() {
   }, []);
 
   const renderGrowthInfo = (entry) => {
-    if (!entry.dynamic_growth) {
-      return <span className="text-gray">• <span className="badge gray">+0.0%</span> (from ? px to ? px)</span>;
+    if (!entry.dynamic_growth || entry.dynamic_growth.previous_px == null) {
+      return <span className="text-blue-500 font-semibold">Initial</span>;
     }
 
     const { diff, percentage, previous_px } = entry.dynamic_growth;

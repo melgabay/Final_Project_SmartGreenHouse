@@ -38,7 +38,7 @@
     },
     {
       "date": "2025-06-07T18:28:08.406005",
-      "file_name_image": "/plant_images/plant11.jpeg",
+      "file_name_image": "plant_images/plant11.jpeg",
       "size_compare": {
         "current_day_px": 26878,
         "growth": -1
@@ -149,18 +149,6 @@
     {
       "date": "2025-06-07T18:28:08.298132",
       "file_name_image": "plant_images/latest_plant.jpg",
-      "size_compare": {
-        "current_day_px": 27997,
-        "growth": 0
-      },
-      "disease_class": {
-        "id": 29,
-        "name": "Tomato___Early_blight"
-      }
-    },
-    {
-      "date": "2025-06-07T18:28:08.455416",
-      "file_name_image": "plant_images/plant13.jpeg",
       "size_compare": {
         "current_day_px": 27997,
         "growth": 0

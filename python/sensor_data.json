@@ -960,5 +960,18 @@
     "uv_light_on": false,
     "irrigation_on": false,
     "force_ventilation_on": false
+  },
+  {
+    "air_temperature_C": 21.75,
+    "air_humidity": 68.95,
+    "light_intensity": 4.79,
+    "soil_ph": 6.58,
+    "soil_ec": 295.0,
+    "soil_temp": 21.27,
+    "soil_humidity": 48.66,
+    "timestamp": "2025-06-12T06:34:17",
+    "uv_light_on": false,
+    "irrigation_on": false,
+    "force_ventilation_on": false
   }
 ]
