@@ -129,10 +129,20 @@ def watch_for_new_images():
 
 # Sensor history
 @app.route("/api/history/<sensor_key>")
+# ─── Sensor history ─────────────────────────────────────────────
+@app.route("/api/history/<sensor_key>")
 def history(sensor_key):
     limit = int(request.args.get("limit", 360))
-    return jsonify(get_series(sensor_key, limit)), 200
-
+    raw = get_series(sensor_key, limit)      # ← ta fonction utilitaire
+    series = [
+        {
+            "timestamp": p["timestamp"],
+            "value": float(p["value"])       # ← force numérique
+        }
+        for p in raw
+        if p.get("value") not in (None, "")
+    ]
+    return jsonify(series), 200
 # Submit new data point
 @app.route("/api/submit_data", methods=["POST"])
 def submit_data():

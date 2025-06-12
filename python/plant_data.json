@@ -7,7 +7,7 @@
         "current_day_px": 12565,
         "growth": 0
       },
-      "deasese_class": {
+      "disease_class": {
         "id": 10,
         "name": "Corn___Northern_Leaf_Blight"
       }
@@ -19,7 +19,7 @@
         "current_day_px": 238590,
         "growth": -1
       },
-      "deasese_class": {
+      "disease_class": {
         "id": 10,
         "name": "Corn___Northern_Leaf_Blight"
       }
@@ -31,7 +31,7 @@
         "current_day_px": 41170,
         "growth": 1
       },
-      "deasese_class": {
+      "disease_class": {
         "id": 7,
         "name": "Corn___Cercospora_leaf_spot Gray_leaf_spot"
       }
@@ -43,7 +43,7 @@
         "current_day_px": 26878,
         "growth": -1
       },
-      "deasese_class": {
+      "disease_class": {
         "id": 10,
         "name": "Corn___Northern_Leaf_Blight"
       }
@@ -55,7 +55,7 @@
         "current_day_px": 12565,
         "growth": -1
       },
-      "deasese_class": {
+      "disease_class": {
         "id": 10,
         "name": "Corn___Northern_Leaf_Blight"
       }
@@ -67,7 +67,7 @@
         "current_day_px": 8800,
         "growth": -1
       },
-      "deasese_class": {
+      "disease_class": {
         "id": 10,
         "name": "Corn___Northern_Leaf_Blight"
       }
@@ -79,7 +79,7 @@
         "current_day_px": 2593,
         "growth": -1
       },
-      "deasese_class": {
+      "disease_class": {
         "id": 8,
         "name": "Corn___Common_rust"
       }
@@ -91,7 +91,7 @@
         "current_day_px": 22279,
         "growth": 1
       },
-      "deasese_class": {
+      "disease_class": {
         "id": 8,
         "name": "Corn___Common_rust"
       }
@@ -103,7 +103,7 @@
         "current_day_px": 32914,
         "growth": 1
       },
-      "deasese_class": {
+      "disease_class": {
         "id": 10,
         "name": "Corn___Northern_Leaf_Blight"
       }
@@ -115,7 +115,7 @@
         "current_day_px": 40083,
         "growth": 1
       },
-      "deasese_class": {
+      "disease_class": {
         "id": 10,
         "name": "Corn___Northern_Leaf_Blight"
       }
@@ -127,7 +127,7 @@
         "current_day_px": 33984,
         "growth": -1
       },
-      "deasese_class": {
+      "disease_class": {
         "id": 10,
         "name": "Corn___Northern_Leaf_Blight"
       }
@@ -141,7 +141,7 @@
         "current_day_px": 27997,
         "growth": 0
       },
-      "deasese_class": {
+      "disease_class": {
         "id": 29,
         "name": "Tomato___Early_blight"
       }
@@ -153,7 +153,7 @@
         "current_day_px": 27997,
         "growth": 0
       },
-      "deasese_class": {
+      "disease_class": {
         "id": 29,
         "name": "Tomato___Early_blight"
       }
@@ -165,7 +165,7 @@
         "current_day_px": 27997,
         "growth": 0
       },
-      "deasese_class": {
+      "disease_class": {
         "id": 29,
         "name": "Tomato___Early_blight"
       }
@@ -177,7 +177,7 @@
         "current_day_px": 11301,
         "growth": -1
       },
-      "deasese_class": {
+      "disease_class": {
         "id": 29,
         "name": "Tomato___Early_blight"
       }
@@ -189,7 +189,7 @@
         "current_day_px": 37847,
         "growth": 1
       },
-      "deasese_class": {
+      "disease_class": {
         "id": 29,
         "name": "Tomato___Early_blight"
       }
@@ -201,7 +201,7 @@
         "current_day_px": 18085,
         "growth": -1
       },
-      "deasese_class": {
+      "disease_class": {
         "id": 29,
         "name": "Tomato___Early_blight"
       }
@@ -213,7 +213,7 @@
         "current_day_px": 35593,
         "growth": 1
       },
-      "deasese_class": {
+      "disease_class": {
         "id": 29,
         "name": "Tomato___Early_blight"
       }
@@ -225,7 +225,7 @@
         "current_day_px": 225622,
         "growth": -1
       },
-      "deasese_class": {
+      "disease_class": {
         "id": 29,
         "name": "Tomato___Early_blight"
       }
@@ -237,7 +237,7 @@
         "current_day_px": 5559,
         "growth": -1
       },
-      "deasese_class": {
+      "disease_class": {
         "id": 29,
         "name": "Tomato___Early_blight"
       }
@@ -249,7 +249,7 @@
         "current_day_px": 3543,
         "growth": -1
       },
-      "deasese_class": {
+      "disease_class": {
         "id": 29,
         "name": "Tomato___Early_blight"
       }
@@ -261,7 +261,7 @@
         "current_day_px": 6927,
         "growth": 1
       },
-      "deasese_class": {
+      "disease_class": {
         "id": 29,
         "name": "Tomato___Early_blight"
       }
@@ -273,7 +273,7 @@
         "current_day_px": 12096,
         "growth": 1
       },
-      "deasese_class": {
+      "disease_class": {
         "id": 29,
         "name": "Tomato___Early_blight"
       }
@@ -359,7 +359,7 @@
         "current_day_px": 15208,
         "growth": 0
       },
-      "deasese_class": {
+      "disease_class": {
         "id": 21,
         "name": "Potato___healthy"
       }
@@ -373,7 +373,7 @@
         "current_day_px": 37624,
         "growth": 0
       },
-      "deasese_class": {
+      "disease_class": {
         "id": 5,
         "name": "Cherry___healthy"
       }
@@ -387,7 +387,7 @@
         "current_day_px": 17620,
         "growth": 0
       },
-      "deasese_class": {
+      "disease_class": {
         "id": 17,
         "name": "Peach___healthy"
       }
@@ -399,7 +399,7 @@
         "current_day_px": 37677,
         "growth": 1
       },
-      "deasese_class": {
+      "disease_class": {
         "id": 17,
         "name": "Peach___healthy"
       }
@@ -411,7 +411,7 @@
         "current_day_px": 15364,
         "growth": -1
       },
-      "deasese_class": {
+      "disease_class": {
         "id": 17,
         "name": "Peach___healthy"
       }
@@ -423,7 +423,7 @@
         "current_day_px": 19131,
         "growth": 1
       },
-      "deasese_class": {
+      "disease_class": {
         "id": 17,
         "name": "Peach___healthy"
       }
@@ -435,7 +435,7 @@
         "current_day_px": 19898,
         "growth": 1
       },
-      "deasese_class": {
+      "disease_class": {
         "id": 17,
         "name": "Peach___healthy"
       }
@@ -545,7 +545,7 @@
         "current_day_px": 8738,
         "growth": 0
       },
-      "deasese_class": {
+      "disease_class": {
         "id": 25,
         "name": "Squash___Powdery_mildew"
       }
@@ -559,7 +559,7 @@
         "current_day_px": 22066,
         "growth": 0
       },
-      "deasese_class": {
+      "disease_class": {
         "id": 2,
         "name": "Apple___Cedar_apple_rust"
       }
