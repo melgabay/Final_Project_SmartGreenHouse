@@ -18,7 +18,7 @@ export default function PageWrapper({ children }) {
           <ul>
             <li><Link to="/dashboard">Dashboard</Link></li>
             <li><Link to="/history">History</Link></li>
-            <li><Link to="/growth-gallery">Growth Plants Data</Link></li>
+            <li><Link to="/growth-gallery">Plant Growth</Link></li>
             <li><Link to="/settings">Settings</Link></li>
           </ul>
         </nav>

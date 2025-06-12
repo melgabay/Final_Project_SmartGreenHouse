@@ -8,24 +8,24 @@ import tensorflow as tf
 import tensorflow_datasets as tfds
 import boto3
 
-# Configuration
+# ─────────────── Configuration ───────────────
 IMAGE_FOLDER = "/Users/melissagabay/Documents/Final/plant image"
 JSON_PATH = "/Users/melissagabay/Documents/Final/python/plant_data.json"
-MIN_AREA_THRESHOLD = 500  # toujours respecté
+MIN_AREA_THRESHOLD = 500  # Minimum contour area
 
-# Modèle
-model = tf.keras.models.load_model('../smart-greenhouse-login/plant_village_CNN.h5')
+# ─────────────── Model & Class Names ───────────────
+model = tf.keras.models.load_model('/Users/melissagabay/Documents/Final/python/plant_village_CNN.h5')
 ds_info = tfds.builder('plant_village').info
 class_names = ds_info.features['label'].names
 
-# JSON existant
+# ─────────────── Load Existing JSON ───────────────
 if os.path.exists(JSON_PATH):
     with open(JSON_PATH, "r") as f:
         history = json.load(f)
 else:
     history = {}
 
-# Client S3
+# ─────────────── S3 Client ───────────────
 s3 = boto3.client(
     "s3",
     aws_access_key_id=os.getenv("AWS_ACCESS_KEY_ID"),
@@ -34,13 +34,14 @@ s3 = boto3.client(
 )
 
 def upload_json_to_s3(local_path, s3_key, bucket_name):
+    """Uploads local JSON file to the specified S3 bucket."""
     try:
         s3.upload_file(local_path, bucket_name, s3_key)
-        print(f"S3 upload successful → s3://{bucket_name}/{s3_key}")
+        print(f"Uploaded to S3: s3://{bucket_name}/{s3_key}")
     except Exception as e:
-        print("❌ Failed to upload to S3:", e)
+        print("Upload to S3 failed:", e)
 
-# Extraction
+# ─────────────── Image Object Extraction ───────────────
 def extract_largest_object(image, min_area_threshold=500):
     height, width = image.shape[:2]
     total_area = height * width
@@ -62,6 +63,7 @@ def extract_largest_object(image, min_area_threshold=500):
 
     return object_area, total_area
 
+# ─────────────── Compare Two Images ───────────────
 def compare_images(current_path, previous_path, min_area_threshold=500):
     img1 = cv2.imread(current_path)
     img2 = cv2.imread(previous_path)
@@ -79,6 +81,7 @@ def compare_images(current_path, previous_path, min_area_threshold=500):
         "growth": growth
     }
 
+# ─────────────── CNN Classification ───────────────
 def analyze_image(image_path):
     img = keras_image.load_img(image_path, target_size=(128, 128))
     img_array = keras_image.img_to_array(img)
@@ -93,7 +96,7 @@ def analyze_image(image_path):
         "name": predicted_name
     }, predicted_name.split("___")[0]
 
-# Traitement des images
+# ─────────────── Process All Images in Folder ───────────────
 for filename in sorted(os.listdir(IMAGE_FOLDER)):
     if filename.lower().endswith(('.jpg', '.jpeg', '.png')):
         image_path = os.path.join(IMAGE_FOLDER, filename)
@@ -101,10 +104,10 @@ for filename in sorted(os.listdir(IMAGE_FOLDER)):
         try:
             disease_class, plant_name = analyze_image(image_path)
 
-            # Vérifier si déjà analysé
+            # Skip if already processed
             already_logged = any(entry["file_name_image"] == image_path for entry in history.get(plant_name, []))
             if already_logged:
-                print(f"⏭️ {filename} déjà présent, ignoré.")
+                print(f"Skipped {filename} (already processed)")
                 continue
 
             previous_entry = history.get(plant_name, [])[-1] if history.get(plant_name) else None
@@ -127,24 +130,21 @@ for filename in sorted(os.listdir(IMAGE_FOLDER)):
                 history[plant_name] = []
             history[plant_name].append(entry)
 
-            print(f"✅ {filename} analysé → {plant_name} ({disease_class['name']})")
+            print(f"Processed {filename} → {plant_name} ({disease_class['name']})")
 
         except Exception as e:
-            print(f"❌ Erreur avec {filename}:", e)
+            print(f"Error processing {filename}:", e)
 
-# Tri final par date pour chaque plante
+# ─────────────── Sort Entries by Date ───────────────
 for plant_name, entries in history.items():
-    history[plant_name] = sorted(
-        entries,
-        key=lambda x: x["date"]
-    )
+    history[plant_name] = sorted(entries, key=lambda x: x["date"])
 
-# Enregistrement JSON
+# ─────────────── Save to JSON ───────────────
 with open(JSON_PATH, "w") as f:
     json.dump(history, f, indent=2)
-print(f"\n💾 Analyse terminée. Données enregistrées dans: {JSON_PATH}")
+print(f"\nAnalysis complete. Data saved to: {JSON_PATH}")
 
-# ✅ Upload vers S3 juste après
+# ─────────────── Upload to S3 ───────────────
 upload_json_to_s3(
     local_path=JSON_PATH,
     s3_key="plant_data.json",

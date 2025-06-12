@@ -1,0 +1,16 @@
+/* src/style/Popup.css */
+.popup-overlay {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 9999;
+}
+
+.popup-box {
+  background: #fff;
+  border: 1px solid #ccc;
+  padding: 16px 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  font-weight: bold;
+}

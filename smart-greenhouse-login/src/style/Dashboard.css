@@ -151,8 +151,61 @@
   box-shadow: inset 0 0 5px rgba(0, 200, 255, 0.5);
 }
 
+.texte_taille{
+        font-size: 20px;
+}
 
 .taille_affichee{
     width: 200px;
     height: 200px;
+}
+
+/* src/style/Popup.css */
+.popup-overlay {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 9999;
+}
+
+.popup-box {
+  background: white;
+  border: 1px solid #ccc;
+  padding: 16px 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  font-weight: bold;
+}
+
+.badge {
+  padding: 2px 6px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  border-radius: 6px;
+  display: inline-block;
+}
+
+.badge.green {
+  background-color: #d1fae5;
+  color: #065f46;
+}
+
+.badge.red {
+  background-color: #fee2e2;
+  color: #991b1b;
+}
+
+.badge.gray {
+  background-color: #e5e7eb;
+  color: #374151;
+}
+
+.text-green {
+  color: #065f46;
+}
+.text-red {
+  color: #991b1b;
+}
+.text-gray {
+  color: #374151;
 }

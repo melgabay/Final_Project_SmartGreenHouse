@@ -5,18 +5,21 @@ import Dashboard from './pages/Dashboard';
 import History from './pages/History';
 import Settings from './pages/Settings';
 import PlantGrowthGallery from './pages/PlantGrowthGallery';
+import GlobalPopup from './pages/GlobalPopup'; // <–– LE POPUP
 
 function App() {
   return (
     <Router>
+      {/* MONTE ICI le popup global */}
+      <GlobalPopup /> 
+
       <Routes>
         <Route path="/" element={<Login />} />
         <Route path="/register" element={<Register />} />
         <Route path="/dashboard" element={<Dashboard />} />
-        <Route path="/history" element={<History/>} />
+        <Route path="/history" element={<History />} />
         <Route path="/settings" element={<Settings />} />
         <Route path="/growth-gallery" element={<PlantGrowthGallery />} />
-
       </Routes>
     </Router>
   );
