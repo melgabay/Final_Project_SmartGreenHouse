@@ -131,6 +131,18 @@
         "id": 10,
         "name": "Corn___Northern_Leaf_Blight"
       }
+    },
+    {
+      "date": "2025-06-12T04:34:06.546829",
+      "file_name_image": "plant_images/plant44.jpg",
+      "size_compare": {
+        "current_day_px": 532953,
+        "growth": -1
+      },
+      "disease_class": {
+        "id": 10,
+        "name": "Corn___Northern_Leaf_Blight"
+      }
     }
   ],
   "Tomato": [
@@ -518,6 +530,18 @@
       "size_compare": {
         "current_day_px": 3411430,
         "growth": 1
+      },
+      "disease_class": {
+        "id": 17,
+        "name": "Peach___healthy"
+      }
+    },
+    {
+      "date": "2025-06-12T14:50:28.418748",
+      "file_name_image": "plant_images/plant45.jpg",
+      "size_compare": {
+        "current_day_px": 250889,
+        "growth": -1
       },
       "disease_class": {
         "id": 17,

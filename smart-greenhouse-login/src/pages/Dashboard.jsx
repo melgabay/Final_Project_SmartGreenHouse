@@ -32,6 +32,7 @@ export default function Dashboard() {
         uv: false, irrigation: false, ventilation: false,
     });
     const [modalImage, setModalImage] = useState(null);
+    const [toast, setToast] = useState(false);
     const plantProfile = localStorage.getItem('selectedPlant') || 'No plant selected';
     const lastTsRef = useRef(null);
     const lastImageKeyRef = useRef(null);
@@ -58,28 +59,6 @@ export default function Dashboard() {
             console.error('Error updating actuators', err);
         }
     };
-
-    const saveActuator = (key) => {
-        const payload = {
-            uv_light_on: actuators.uv,
-            irrigation_on: actuators.irrigation,
-            force_ventilation_on: actuators.ventilation,
-            uv_on_value: thresholds.uv.on,
-            uv_off_value: thresholds.uv.off,
-            irrigation_on_value: thresholds.irrigation.on,
-            irrigation_off_value: thresholds.irrigation.off,
-            force_ventilation_on_value: thresholds.ventilation.on,
-            force_ventilation_off_value: thresholds.ventilation.off,
-        };
-        pushActuators(payload);
-        setEditMode((prev) => ({...prev, [key]: false}));
-    };
-
-    const cancelEdit = (key) => {
-        setEditMode((prev) => ({...prev, [key]: false}));
-    };
-
-    useEffect(() => {
         const fetchLatest = async () => {
             try {
                 const {data} = await axios.get('http://127.0.0.1:5500/api/latest-sensor');
@@ -87,24 +66,68 @@ export default function Dashboard() {
                     lastTsRef.current = data.timestamp;
                     setSensorData(data);
                     setActuators({
-                        uv: data.uv_light_on ? 'ON' : 'OFF',
-                        irrigation: data.irrigation_on ? 'ON' : 'OFF',
-                        ventilation: data.force_ventilation_on ? 'ON' : 'OFF',
+                        uv: data.uv_light_on,          // valeurs déjà "ON" ou "OFF"
+                        irrigation: data.irrigation_on,
+                        ventilation: data.force_ventilation_on,
                     });
                     setThresholds({
-                        uv: {on: data.uv_on_value ?? '', off: data.uv_off_value ?? '', paused: false},
-                        irrigation: {on: data.irrigation_on_value ?? '', off: data.irrigation_off_value ?? '', paused: false},
-                        ventilation: {
-                            on: data.force_ventilation_on_value ?? '',
-                            off: data.force_ventilation_off_value ?? '',
-                            paused: false,
+                        uv: {
+                            on: data.thresholds?.uv_light_on?.on ?? '',
+                            off: data.thresholds?.uv_light_on?.off ?? '',
+                            paused: data.mode?.uv_light_on === 'MANUAL'
                         },
+                        irrigation: {
+                            on: data.thresholds?.irrigation_on?.on ?? '',
+                            off: data.thresholds?.irrigation_on?.off ?? '',
+                            paused: data.mode?.irrigation_on === 'MANUAL'
+                        },
+                        ventilation: {
+                            on: data.thresholds?.force_ventilation_on?.on ?? '',
+                            off: data.thresholds?.force_ventilation_on?.off ?? '',
+                            paused: data.mode?.force_ventilation_on === 'MANUAL'
+                        }
                     });
                 }
             } catch (err) {
                 console.error('Error fetching latest sensor', err);
             }
         };
+
+const saveActuator = async (key) => {
+  const payload = {
+    // STATES
+    uv_light_on:           actuators.uv,
+    irrigation_on:         actuators.irrigation,
+    force_ventilation_on:  actuators.ventilation,
+    // MODE
+    uv_light_on_manual:            thresholds.uv.paused,
+    irrigation_on_manual:          thresholds.irrigation.paused,
+    force_ventilation_on_manual:   thresholds.ventilation.paused,
+    // THRESHOLDS
+    uv_light_on_on:                thresholds.uv.on,
+    uv_light_on_off:               thresholds.uv.off,
+    irrigation_on_on:              thresholds.irrigation.on,
+    irrigation_on_off:             thresholds.irrigation.off,
+    force_ventilation_on_on:       thresholds.ventilation.on,
+    force_ventilation_on_off:      thresholds.ventilation.off,
+  };
+
+  try {
+    await pushActuators(payload);   // POST
+    await fetchLatest();            // ← mise à jour immédiate
+    setToast(true);                 // affiche le toast
+    setTimeout(() => setToast(false), 2500);  // disparaît après 2,5 s
+  } catch (err) {
+    console.error(err);
+  }
+
+  setEditMode((prev) => ({ ...prev, [key]: false }));
+};
+    const cancelEdit = (key) => {
+        setEditMode((prev) => ({...prev, [key]: false}));
+    };
+
+    useEffect(() => {
 
         const fetchSeries = async () => {
             for (const {key} of SENSORS) {
@@ -251,11 +274,16 @@ export default function Dashboard() {
                         return (
                             <div className="card" key={key}>
                                 <b>{labels[key]}</b>
-                                <span className={`status ${actuators[key] === 'ON' ? 'on' : 'off'}`}>{actuators[key]}</span>
+                                <span
+                                    className={`status ${actuators[key] === 'ON' ? 'on' : 'off'}`}>{actuators[key]}</span>
 
                                 <div className="form-check">
-                                    <input type="checkbox" className="form-check-input" checked={thresholds[key].paused} onChange={(e) => setThresholds((p) => ({...p, [key]: {...p[key], paused: e.target.checked}}))} id={`pause-${key}`}/>
-                                    <label className="form-check-label" htmlFor={`pause-${key}`}>Pause setpoint</label>
+                                    <input type="checkbox" className="form-check-input" checked={thresholds[key].paused}
+                                           onChange={(e) => setThresholds((p) => ({
+                                               ...p,
+                                               [key]: {...p[key], paused: e.target.checked}
+                                           }))} id={`pause-${key}`}/>
+                                    <label className="form-check-label" htmlFor={`pause-${key}`}>Manual mode</label>
                                 </div>
 
                                 {!editMode[key] ? (
@@ -265,26 +293,54 @@ export default function Dashboard() {
                                                 <small className="text-muted">Paused</small>
                                             ) : (
                                                 <>
-                                                    <small>If {labels[key]} ≥ {thresholds[key].on || '—'} then ON</small><br/>
-                                                    <small>If {labels[key]} ≤ {thresholds[key].off || '—'} then OFF</small>
+                                                    <small>If {labels[key]} ≥ {thresholds[key].on || '—'} then
+                                                        ON</small><br/>
+                                                    <small>If {labels[key]} ≤ {thresholds[key].off || '—'} then
+                                                        OFF</small>
                                                 </>
                                             )}
                                         </div>
-                                        <button className="action-button mt-2" onClick={() => setEditMode((p) => ({...p, [key]: true}))}>Modify</button>
+                                        <button className="action-button mt-2"
+                                                onClick={() => setEditMode((p) => ({...p, [key]: true}))}>Modify
+                                        </button>
                                     </>
                                 ) : (
                                     <>
-                                        <select className="form-select mt-2" value={actuators[key]} onChange={(e) => setActuators((p) => ({...p, [key]: e.target.value}))}>
-                                            <option value="ON">ON</option>
-                                            <option value="OFF">OFF</option>
-                                        </select>
-                                        <div className="d-flex gap-2 mt-2">
-                                            <input type="number" className="form-control" placeholder="ON value" value={thresholds[key].on} onChange={(e) => setThresholds((p) => ({...p, [key]: {...p[key], on: e.target.value}}))}/>
-                                            <input type="number" className="form-control" placeholder="OFF value" value={thresholds[key].off} onChange={(e) => setThresholds((p) => ({...p, [key]: {...p[key], off: e.target.value}}))}/>
-                                        </div>
+                                        {thresholds[key].paused ? (
+                                            <div className="d-flex gap-2 mt-2">
+                                                <button
+                                                    className={`action-button ${actuators[key] === 'ON' ? 'on' : ''}`}
+                                                    onClick={() => setActuators((p) => ({...p, [key]: 'ON'}))}>ON
+                                                </button>
+                                                <button
+                                                    className={`action-button ${actuators[key] === 'OFF' ? 'off' : ''}`}
+                                                    onClick={() => setActuators((p) => ({...p, [key]: 'OFF'}))}>OFF
+                                                </button>
+                                            </div>
+                                        ) : (
+                                            <div className="d-flex gap-2 mt-2">
+                                                <input type="number" className="form-control" placeholder="ON value"
+                                                       value={thresholds[key].on}
+                                                       onChange={(e) => setThresholds((p) => ({
+                                                           ...p,
+                                                           [key]: {...p[key], on: e.target.value}
+                                                       }))}/>
+                                                <input type="number" className="form-control" placeholder="OFF value"
+                                                       value={thresholds[key].off}
+                                                       onChange={(e) => setThresholds((p) => ({
+                                                           ...p,
+                                                           [key]: {...p[key], off: e.target.value}
+                                                       }))}/>
+                                            </div>
+                                        )}
+
                                         <div className="mt-2">
-                                            <button className="action-button me-2" onClick={() => saveActuator(key)}>Save</button>
-                                            <button className="action-button secondary" onClick={() => cancelEdit(key)}>Cancel</button>
+                                            <button className="action-button me-2"
+                                                    onClick={() => saveActuator(key)}>Save
+                                            </button>
+                                            <button className="action-button secondary"
+                                                    onClick={() => cancelEdit(key)}>Cancel
+                                            </button>
                                         </div>
                                     </>
                                 )}
@@ -302,6 +358,15 @@ export default function Dashboard() {
                     </div>
                 </div>
             )}
+            {toast && (
+  <div className="toast-container position-fixed bottom-0 end-0 p-3" style={{ zIndex: 9999 }}>
+    <div className="toast show" role="alert">
+      <div className="toast-body">
+        Saved
+      </div>
+    </div>
+  </div>
+)}
         </PageWrapper>
     );
 }

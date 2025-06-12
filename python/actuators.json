@@ -1,15 +1,26 @@
 {
-  "actuators": {
-    "uv_light_on": "ON",
+  "states": {
+    "uv_light_on": "OFF",
     "irrigation_on": "ON",
     "force_ventilation_on": "ON"
   },
+  "mode": {
+    "uv_light_on": "MANUAL",
+    "irrigation_on": "MANUAL",
+    "force_ventilation_on": "AUTO"
+  },
   "thresholds": {
-    "uv_on_value": "8",
-    "uv_off_value": "20",
-    "irrigation_on_value": "40",
-    "irrigation_off_value": "50",
-    "force_ventilation_on_value": "40",
-    "force_ventilation_off_value": "50"
+    "uv_light_on": {
+      "on": 8.0,
+      "off": 20.0
+    },
+    "irrigation_on": {
+      "on": 40.0,
+      "off": 50.0
+    },
+    "force_ventilation_on": {
+      "on": 19.0,
+      "off": 24.0
+    }
   }
 }

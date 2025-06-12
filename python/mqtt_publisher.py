@@ -1,16 +1,17 @@
-# mqtt_publisher.py – Simulates sensor data and publishes to MQTT broker
-import paho.mqtt.publish as publish
+# mqtt_publisher.py – Publishes sensor values + allows actuator commands
 import time
 import random
 import ssl
+import paho.mqtt.client as mqtt
+import paho.mqtt.publish as publish
 
-# MQTT Broker Configuration
-MQTT_HOST = "33ea71e0e0034036b86bee133525b810.s1.eu.hivemq.cloud"
-MQTT_PORT = 8883
+# ───── MQTT Config ─────
+MQTT_HOST     = "33ea71e0e0034036b86bee133525b810.s1.eu.hivemq.cloud"
+MQTT_PORT     = 8883
 MQTT_USERNAME = "SmartGreenHouse"
 MQTT_PASSWORD = "SmartGreenHouse2025"
 
-# Sensor Topics & Value Generators
+# ───── Topics: capteurs simulés ─────
 sensor_topics = {
     "env_monitoring_system/sensors/air_temperature_C": lambda: round(20 + random.random() * 5, 2),
     "env_monitoring_system/sensors/air_humidity": lambda: round(50 + random.random() * 20, 2),
@@ -21,22 +22,36 @@ sensor_topics = {
     "env_monitoring_system/sensors/soil_humidity": lambda: round(30 + random.random() * 30, 2),
 }
 
-# Main Publishing Loop
-while True:
-    for topic, value_generator in sensor_topics.items():
-        value = value_generator()
-        try:
-            publish.single(
-                topic,
-                str(value),
-                hostname=MQTT_HOST,
-                port=MQTT_PORT,
-                auth={'username': MQTT_USERNAME, 'password': MQTT_PASSWORD},
-                tls={'tls_version': ssl.PROTOCOL_TLS}
-            )
-            print(f"Published to {topic}: {value}")
-        except Exception as e:
-            print(f"Failed to publish to {topic}: {e}")
+# ───── Publication pour les actuators ─────
+def publish_command(topic: str, payload: str):
+    try:
+        publish.single(
+            topic,
+            payload=str(payload),
+            hostname=MQTT_HOST,
+            port=MQTT_PORT,
+            auth={'username': MQTT_USERNAME, 'password': MQTT_PASSWORD},
+            tls={'tls_version': ssl.PROTOCOL_TLS}
+        )
+        print(f"[ACTUATOR] Published to {topic}: {payload}")
+    except Exception as e:
+        print(f"[ERROR] Failed to publish actuator command: {e}")
 
-    # Wait 30 seconds before sending the next batch
-    time.sleep(30)
+# ───── Simulation continue des capteurs ─────
+if __name__ == "__main__":
+    while True:
+        for topic, generate in sensor_topics.items():
+            value = generate()
+            try:
+                publish.single(
+                    topic,
+                    str(value),
+                    hostname=MQTT_HOST,
+                    port=MQTT_PORT,
+                    auth={'username': MQTT_USERNAME, 'password': MQTT_PASSWORD},
+                    tls={'tls_version': ssl.PROTOCOL_TLS}
+                )
+                print(f"[SENSOR] Published to {topic}: {value}")
+            except Exception as e:
+                print(f"[ERROR] Failed to publish to {topic}: {e}")
+        time.sleep(10)
