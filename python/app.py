@@ -22,6 +22,7 @@ AWS_REGION       = os.getenv("AWS_REGION")
 S3_PREFIX        = "plant_images/"
 CHECK_INTERVAL   = 15          # seconds
 
+# Initialize S3 client
 s3_client = boto3.client(
     "s3",
     aws_access_key_id     = os.getenv("AWS_ACCESS_KEY_ID"),
@@ -29,6 +30,7 @@ s3_client = boto3.client(
     region_name           = AWS_REGION,
 )
 
+# Threading lock and cache variable
 lock = threading.Lock()
 _last_key_seen = None
 
@@ -54,7 +56,7 @@ for _key, _local, _is_list in (
     s3_download(_key, _local, default_as_list=_is_list)
 
 
-# ─────────────────── Load actuators.json (schéma structuré) ───────────────────
+# ─────────────────── Actuator File Format Management ───────────────────
 try:
     with open(ACTUATOR_FILE) as f:
         saved = json.load(f)
@@ -101,25 +103,28 @@ except FileNotFoundError:
         }
     }
 
+# Save actuators state to local + upload to S3
 def save_actuator_state():
     with lock:
         with open(ACTUATOR_FILE, "w") as f:
             json.dump(ACTUATORS, f, indent=2)   # ← on écrit l’objet complet
         s3_upload(ACTUATOR_FILE, ACT_KEY)
 
-
+# Save full sensor dataset to disk and S3
 def save_sensor_data(data):
     with lock:
         with open(DATA_FILE, "w") as f:
             json.dump(data, f, indent=2)
         s3_upload(DATA_FILE, JSON_KEY)
 
+# Get latest image key from S3 sorted by modification date
 def latest_image_key_s3():
     resp = s3_client.list_objects_v2(Bucket=BUCKET, Prefix=S3_PREFIX)
     if "Contents" not in resp:
         return None
     return max(resp["Contents"], key=lambda o: o["LastModified"])["Key"]
 
+# Background thread that watches for new images in S3 and triggers analysis
 def watch_for_new_images():
     global _last_key_seen
     while True:
@@ -136,9 +141,10 @@ def watch_for_new_images():
             app.logger.error(f"Watcher error: {e}")
         time.sleep(CHECK_INTERVAL)
 
+# Start background watcher
 threading.Thread(target=watch_for_new_images, daemon=True).start()
 
-# ───────────────────────────── Routes ───────────────────────────
+# ──────────────── API Routes ────────────────
 @app.get("/api/history/<sensor_key>")
 def history(sensor_key):
     limit = int(request.args.get("limit", 360))
@@ -254,5 +260,6 @@ def plant_data_s3():
     except Exception as e:
         return jsonify({"error": str(e)}), 500
 
+# Run Flask app on port 5500
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=int(os.getenv("PORT", 5500)), debug=True)

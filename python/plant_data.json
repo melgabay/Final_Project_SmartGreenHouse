@@ -143,6 +143,18 @@
         "id": 10,
         "name": "Corn___Northern_Leaf_Blight"
       }
+    },
+    {
+      "date": "2025-06-17T23:26:12.272974",
+      "file_name_image": "plant_images/plant51.jpg",
+      "size_compare": {
+        "current_day_px": 913055,
+        "growth": 1
+      },
+      "disease_class": {
+        "id": 10,
+        "name": "Corn___Northern_Leaf_Blight"
+      }
     }
   ],
   "Tomato": [
@@ -349,6 +361,18 @@
         "id": 29,
         "name": "Tomato___Early_blight"
       }
+    },
+    {
+      "date": "2025-06-17T23:22:07.441163",
+      "file_name_image": "plant_images/plant50.jpg",
+      "size_compare": {
+        "current_day_px": 731264,
+        "growth": 1
+      },
+      "disease_class": {
+        "id": 29,
+        "name": "Tomato___Early_blight"
+      }
     }
   ],
   "Potato": [
@@ -542,6 +566,66 @@
       "size_compare": {
         "current_day_px": 250889,
         "growth": -1
+      },
+      "disease_class": {
+        "id": 17,
+        "name": "Peach___healthy"
+      }
+    },
+    {
+      "date": "2025-06-12T16:35:15.076290",
+      "file_name_image": "plant_images/plant46.jpg",
+      "size_compare": {
+        "current_day_px": 191469,
+        "growth": 1
+      },
+      "disease_class": {
+        "id": 17,
+        "name": "Peach___healthy"
+      }
+    },
+    {
+      "date": "2025-06-17T22:55:44.423118",
+      "file_name_image": "plant_images/plant47.jpg",
+      "size_compare": {
+        "current_day_px": 5684,
+        "growth": -1
+      },
+      "disease_class": {
+        "id": 17,
+        "name": "Peach___healthy"
+      }
+    },
+    {
+      "date": "2025-06-17T23:08:44.339535",
+      "file_name_image": "plant_images/plant48.jpg",
+      "size_compare": {
+        "current_day_px": 1006287,
+        "growth": 1
+      },
+      "disease_class": {
+        "id": 17,
+        "name": "Peach___healthy"
+      }
+    },
+    {
+      "date": "2025-06-17T23:14:16.196785",
+      "file_name_image": "plant_images/plant49.jpg",
+      "size_compare": {
+        "current_day_px": 46853,
+        "growth": -1
+      },
+      "disease_class": {
+        "id": 17,
+        "name": "Peach___healthy"
+      }
+    },
+    {
+      "date": "2025-06-17T23:32:54.826030",
+      "file_name_image": "plant_images/plant52.jpg",
+      "size_compare": {
+        "current_day_px": 403269,
+        "growth": 1
       },
       "disease_class": {
         "id": 17,

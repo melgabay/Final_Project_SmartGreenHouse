@@ -4,13 +4,13 @@ try:
     import RPi.GPIO as GPIO
 except ModuleNotFoundError:
     from mock_gpio import gpio as GPIO
-# Configuration des pins GPIO
+# GPIO Pin Configuration
 GPIO.setmode(GPIO.BCM)
 GPIO.setwarnings(False)
 
-PIN_LIGHT = 17       # GPIO pour lumière UV
-PIN_IRRIGATION = 27  # GPIO pour pompe à eau
-PIN_FAN = 22         # GPIO pour ventilation
+PIN_LIGHT = 17       # GPIO for UV light
+PIN_IRRIGATION = 27  # GPIO for irrigation
+PIN_FAN = 22         # GPIO for fan
 
 GPIO.setup(PIN_LIGHT, GPIO.OUT)
 GPIO.setup(PIN_IRRIGATION, GPIO.OUT)

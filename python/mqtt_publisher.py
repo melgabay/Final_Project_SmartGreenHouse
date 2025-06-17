@@ -11,7 +11,7 @@ MQTT_PORT     = 8883
 MQTT_USERNAME = "SmartGreenHouse"
 MQTT_PASSWORD = "SmartGreenHouse2025"
 
-# ───── Topics: capteurs simulés ─────
+# ───── Topics: simulated sensors ─────
 sensor_topics = {
     "env_monitoring_system/sensors/air_temperature_C": lambda: round(20 + random.random() * 5, 2),
     "env_monitoring_system/sensors/air_humidity": lambda: round(50 + random.random() * 20, 2),
@@ -22,7 +22,7 @@ sensor_topics = {
     "env_monitoring_system/sensors/soil_humidity": lambda: round(30 + random.random() * 30, 2),
 }
 
-# ───── Publication pour les actuators ─────
+# ───── Publication for actuators ─────
 def publish_command(topic: str, payload: str):
     try:
         publish.single(
@@ -37,7 +37,7 @@ def publish_command(topic: str, payload: str):
     except Exception as e:
         print(f"[ERROR] Failed to publish actuator command: {e}")
 
-# ───── Simulation continue des capteurs ─────
+# ───── Continuous Sensor Simulation ─────
 if __name__ == "__main__":
     while True:
         for topic, generate in sensor_topics.items():
