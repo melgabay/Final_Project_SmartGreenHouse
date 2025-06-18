@@ -10,20 +10,20 @@ import paho.mqtt.client as mqtt
 from tensorflow.keras.preprocessing import image as keras_image
 import tensorflow as tf
 import tensorflow_datasets as tfds
+from dotenv import load_dotenv
 
 # ─────────────────────── Configuration ───────────────────────
+load_dotenv()
+
+# Model location in S3
 MODEL_PATH = "plant_village_CNN.h5"
+MODEL_S3_KEY = "plant_village_CNN.h5"
 LOCAL_JSON = "plant_data.json"
 LATEST_IMAGE_NAME = "latest_plant.jpg"
 PREVIOUS_IMAGE_NAME = "previous_plant.jpg"
 JSON_S3_KEY = "plant_data.json"
 IMAGE_S3_PREFIX = "plant_images/"
 MIN_AREA_THRESHOLD = 500
-
-# Load trained CNN model for disease classification
-model = tf.keras.models.load_model(MODEL_PATH)
-ds_info = tfds.builder('plant_village').info
-class_names = ds_info.features['label'].names
 
 # Initialize S3 client with credentials from environment variables
 s3 = boto3.client(
@@ -55,6 +55,14 @@ def download_json(key, local_path):
         with open(local_path, "w") as f:
             json.dump({}, f, indent=2)
         return {}
+
+# Download model before loading if not downloaded
+# download_from_s3(MODEL_S3_KEY, MODEL_PATH)
+
+# Load trained model and class labels
+model = tf.keras.models.load_model(MODEL_PATH)
+ds_info = tfds.builder('plant_village').info
+class_names = ds_info.features['label'].names
 
 # ─────────────────────── Image Processing ───────────────────────
 

@@ -155,6 +155,18 @@
         "id": 10,
         "name": "Corn___Northern_Leaf_Blight"
       }
+    },
+    {
+      "date": "2025-06-18T01:06:54.341595",
+      "file_name_image": "plant_images/plant53.jpg",
+      "size_compare": {
+        "current_day_px": 454264,
+        "growth": 1
+      },
+      "disease_class": {
+        "id": 10,
+        "name": "Corn___Northern_Leaf_Blight"
+      }
     }
   ],
   "Tomato": [
