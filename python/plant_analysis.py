@@ -127,7 +127,7 @@ def classify_image(image_path):
 # ─────────────────────── S3 Image Management ───────────────────────
 
 # Find the latest image file in S3 by modification date
-def find_latest_image_in_s3(prefix=IMAGE_S3_PREFIX):
+def find_latest_image_in_s3(prefix="image_c"):
     response = s3.list_objects_v2(Bucket=BUCKET_NAME, Prefix=prefix)
     if "Contents" not in response:
         return None
@@ -145,6 +145,26 @@ def find_latest_image_in_s3(prefix=IMAGE_S3_PREFIX):
         reverse=True
     )
     return image_keys[0]
+
+
+# def find_latest_image_in_s3(prefix=IMAGE_S3_PREFIX):
+#     response = s3.list_objects_v2(Bucket=BUCKET_NAME, Prefix=prefix)
+#     if "Contents" not in response:
+#         return None
+#
+#     image_keys = [
+#         obj["Key"] for obj in response["Contents"]
+#         if obj["Key"].lower().endswith((".jpg", ".jpeg", ".png"))
+#     ]
+#     if not image_keys:
+#         return None
+#
+#     # Sort by latest modification date
+#     image_keys.sort(
+#         key=lambda key: s3.head_object(Bucket=BUCKET_NAME, Key=key)["LastModified"],
+#         reverse=True
+#     )
+#     return image_keys[0]
 
 # ─────────────────────── MQTT Messaging ───────────────────────
 
@@ -265,3 +285,39 @@ def get_growth_series(plant_name: str, limit: int = 30, json_key: str = JSON_S3_
         previous_px = current_px
 
     return series
+
+
+def run_manual_analysis(image_key: str, label="manual"):
+    history = download_json(JSON_S3_KEY, LOCAL_JSON)
+
+    if any(os.path.basename(e["file_name_image"]) == os.path.basename(image_key)
+           for entries in history.values() for e in entries):
+        print("[INFO] Already processed.")
+        return
+
+    download_from_s3(image_key, LATEST_IMAGE_NAME)
+    disease_class, plant_name = classify_image(LATEST_IMAGE_NAME)
+
+    previous_entry = history.get(plant_name, [])[-1] if plant_name in history else None
+
+    if previous_entry:
+        download_from_s3(previous_entry["file_name_image"], PREVIOUS_IMAGE_NAME)
+        compare_data = compare_images(LATEST_IMAGE_NAME, PREVIOUS_IMAGE_NAME)
+    else:
+        area, _ = extract_largest_object(cv2.imread(LATEST_IMAGE_NAME))
+        compare_data = {"current_day_px": area, "growth": 0}
+
+    new_entry = {
+        "date": datetime.utcnow().isoformat(),
+        "file_name_image": image_key,
+        "size_compare": compare_data,
+        "disease_class": disease_class
+    }
+
+    history.setdefault(plant_name, []).append(new_entry)
+    with open(LOCAL_JSON, "w") as f:
+        json.dump(history, f, indent=2)
+    upload_to_s3(LOCAL_JSON, JSON_S3_KEY)
+
+    send_mqtt_message(new_entry, plant_name)
+    print(f"[OK] Manually added {image_key}")

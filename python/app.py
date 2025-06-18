@@ -119,27 +119,75 @@ def save_sensor_data(data):
 
 # Get latest image key from S3 sorted by modification date
 def latest_image_key_s3():
-    resp = s3_client.list_objects_v2(Bucket=BUCKET, Prefix=S3_PREFIX)
+    resp = s3_client.list_objects_v2(Bucket=BUCKET, Prefix="image_c")
     if "Contents" not in resp:
         return None
     return max(resp["Contents"], key=lambda o: o["LastModified"])["Key"]
 
 # Background thread that watches for new images in S3 and triggers analysis
 def watch_for_new_images():
-    global _last_key_seen
     while True:
         try:
-            key = latest_image_key_s3()
-            if key and key != _last_key_seen:
-                _last_key_seen = key
+            resp = s3_client.list_objects_v2(Bucket=BUCKET, Prefix="image_c")
+            if "Contents" not in resp:
+                time.sleep(CHECK_INTERVAL)
+                continue
+
+            image_keys = [
+                obj["Key"] for obj in resp["Contents"]
+                if obj["Key"].lower().endswith((".jpg", ".jpeg", ".png"))
+            ]
+
+            image_keys.sort(
+                key=lambda key: s3_client.head_object(Bucket=BUCKET, Key=key)["LastModified"]
+            )
+
+            already_processed = set()
+            if os.path.exists(PLANT_DATA_FILE):
+                with open(PLANT_DATA_FILE, "r") as f:
+                    history = json.load(f)
+                    for entries in history.values():
+                        for e in entries:
+                            already_processed.add(os.path.basename(e["file_name_image"]))
+
+            # 🚀 ici on traite TOUTES les images non encore vues
+            for key in image_keys:
+                if os.path.basename(key) in already_processed:
+                    continue
+
                 try:
-                    requests.post("http://localhost:5500/api/process-latest", timeout=10)
-                    app.logger.info("New image detected – analysis triggered")
+                    res = requests.post("http://localhost:5500/api/process-latest", timeout=10)
+                    if res.ok:
+                        app.logger.info(f"Image processed: {key}")
+                    else:
+                        app.logger.warning(f"Failed to process: {key} – {res.status_code}")
                 except Exception as e:
-                    app.logger.error(f"/api/process-latest fail: {e}")
+                    app.logger.error(f"Request failed for image {key}: {e}")
+
+                time.sleep(2)  # petit délai entre chaque image
+
         except Exception as e:
             app.logger.error(f"Watcher error: {e}")
+
+        # 🔁 on ne dort qu'après avoir tout traité
         time.sleep(CHECK_INTERVAL)
+
+# def watch_for_new_images():
+#     global _last_key_seen
+#     while True:
+#         try:
+#             key = latest_image_key_s3()
+#             if key and key != _last_key_seen:
+#                 _last_key_seen = key
+#                 try:
+#                     requests.post("http://localhost:5500/api/process-latest", timeout=10)
+#                     app.logger.info("New image detected – analysis triggered")
+#                 except Exception as e:
+#                     app.logger.error(f"/api/process-latest fail: {e}")
+#         except Exception as e:
+#             app.logger.error(f"Watcher error: {e}")
+#         time.sleep(CHECK_INTERVAL)
+
 
 # Start background watcher
 threading.Thread(target=watch_for_new_images, daemon=True).start()

@@ -385,6 +385,18 @@
         "id": 29,
         "name": "Tomato___Early_blight"
       }
+    },
+    {
+      "date": "2025-06-18T11:20:06.789387",
+      "file_name_image": "plant_images/plant55.JPG",
+      "size_compare": {
+        "current_day_px": 579214,
+        "growth": -1
+      },
+      "disease_class": {
+        "id": 29,
+        "name": "Tomato___Early_blight"
+      }
     }
   ],
   "Potato": [
@@ -643,6 +655,30 @@
         "id": 17,
         "name": "Peach___healthy"
       }
+    },
+    {
+      "date": "2025-06-18T05:43:15.602913",
+      "file_name_image": "image_c0_2025-06-17_19-01-30.jpg",
+      "size_compare": {
+        "current_day_px": 109433,
+        "growth": 1
+      },
+      "disease_class": {
+        "id": 17,
+        "name": "Peach___healthy"
+      }
+    },
+    {
+      "date": "2025-06-18T11:17:02.733935",
+      "file_name_image": "plant_images/plant54.JPG",
+      "size_compare": {
+        "current_day_px": 425906,
+        "growth": -1
+      },
+      "disease_class": {
+        "id": 17,
+        "name": "Peach___healthy"
+      }
     }
   ],
   "Squash": [
@@ -666,6 +702,18 @@
       "size_compare": {
         "current_day_px": 22066,
         "growth": 0
+      },
+      "disease_class": {
+        "id": 2,
+        "name": "Apple___Cedar_apple_rust"
+      }
+    },
+    {
+      "date": "2025-06-18T05:20:14.989501",
+      "file_name_image": "image_c1_2025-06-17_19-01-31.jpg",
+      "size_compare": {
+        "current_day_px": 213634,
+        "growth": 1
       },
       "disease_class": {
         "id": 2,
