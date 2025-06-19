@@ -397,6 +397,42 @@
         "id": 29,
         "name": "Tomato___Early_blight"
       }
+    },
+    {
+      "date": "2025-06-19T12:12:05.276885",
+      "file_name_image": "image_c0_2025-06-18_18-39-48.jpg",
+      "size_compare": {
+        "current_day_px": 38041,
+        "growth": -1
+      },
+      "disease_class": {
+        "id": 29,
+        "name": "Tomato___Early_blight"
+      }
+    },
+    {
+      "date": "2025-06-19T12:12:11.916248",
+      "file_name_image": "image_c0_2025-06-18_20-08-24.jpg",
+      "size_compare": {
+        "current_day_px": 58487,
+        "growth": 1
+      },
+      "disease_class": {
+        "id": 29,
+        "name": "Tomato___Early_blight"
+      }
+    },
+    {
+      "date": "2025-06-19T12:12:17.816970",
+      "file_name_image": "image_c0_2025-06-18_22-55-20.jpg",
+      "size_compare": {
+        "current_day_px": 54432,
+        "growth": -1
+      },
+      "disease_class": {
+        "id": 29,
+        "name": "Tomato___Early_blight"
+      }
     }
   ],
   "Potato": [
@@ -679,6 +715,114 @@
         "id": 17,
         "name": "Peach___healthy"
       }
+    },
+    {
+      "date": "2025-06-19T12:11:06.327520",
+      "file_name_image": "image_c0_2025-06-17_00-39-27.jpg",
+      "size_compare": {
+        "current_day_px": 110086,
+        "growth": 1
+      },
+      "disease_class": {
+        "id": 17,
+        "name": "Peach___healthy"
+      }
+    },
+    {
+      "date": "2025-06-19T12:11:19.427925",
+      "file_name_image": "image_c0_2025-06-17_18-37-54.jpg",
+      "size_compare": {
+        "current_day_px": 109422,
+        "growth": -1
+      },
+      "disease_class": {
+        "id": 17,
+        "name": "Peach___healthy"
+      }
+    },
+    {
+      "date": "2025-06-19T12:11:29.562426",
+      "file_name_image": "image_c0_2025-06-17_18-41-29.jpg",
+      "size_compare": {
+        "current_day_px": 110115,
+        "growth": 1
+      },
+      "disease_class": {
+        "id": 17,
+        "name": "Peach___healthy"
+      }
+    },
+    {
+      "date": "2025-06-19T12:11:39.411157",
+      "file_name_image": "image_c0_2025-06-17_18-45-10.jpg",
+      "size_compare": {
+        "current_day_px": 111166,
+        "growth": 1
+      },
+      "disease_class": {
+        "id": 17,
+        "name": "Peach___healthy"
+      }
+    },
+    {
+      "date": "2025-06-19T12:11:49.084737",
+      "file_name_image": "image_c0_2025-06-17_18-49-47.jpg",
+      "size_compare": {
+        "current_day_px": 110593,
+        "growth": -1
+      },
+      "disease_class": {
+        "id": 17,
+        "name": "Peach___healthy"
+      }
+    },
+    {
+      "date": "2025-06-19T12:11:59.203860",
+      "file_name_image": "image_c0_2025-06-18_18-16-24.jpg",
+      "size_compare": {
+        "current_day_px": 74427,
+        "growth": -1
+      },
+      "disease_class": {
+        "id": 17,
+        "name": "Peach___healthy"
+      }
+    },
+    {
+      "date": "2025-06-19T12:12:20.611366",
+      "file_name_image": "image_c1_2025-06-18_22-55-21.jpg",
+      "size_compare": {
+        "current_day_px": 273135,
+        "growth": 1
+      },
+      "disease_class": {
+        "id": 17,
+        "name": "Peach___healthy"
+      }
+    },
+    {
+      "date": "2025-06-19T12:12:24.426677",
+      "file_name_image": "image_c0_2025-06-18_23-04-43.jpg",
+      "size_compare": {
+        "current_day_px": 71102,
+        "growth": -1
+      },
+      "disease_class": {
+        "id": 17,
+        "name": "Peach___healthy"
+      }
+    },
+    {
+      "date": "2025-06-19T12:12:26.818162",
+      "file_name_image": "image_c1_2025-06-18_23-04-44.jpg",
+      "size_compare": {
+        "current_day_px": 270920,
+        "growth": 1
+      },
+      "disease_class": {
+        "id": 17,
+        "name": "Peach___healthy"
+      }
     }
   ],
   "Squash": [
@@ -713,6 +857,102 @@
       "file_name_image": "image_c1_2025-06-17_19-01-31.jpg",
       "size_compare": {
         "current_day_px": 213634,
+        "growth": 1
+      },
+      "disease_class": {
+        "id": 2,
+        "name": "Apple___Cedar_apple_rust"
+      }
+    },
+    {
+      "date": "2025-06-19T12:11:13.204440",
+      "file_name_image": "image_c1_2025-06-17_00-39-27.jpg",
+      "size_compare": {
+        "current_day_px": 218445,
+        "growth": 1
+      },
+      "disease_class": {
+        "id": 2,
+        "name": "Apple___Cedar_apple_rust"
+      }
+    },
+    {
+      "date": "2025-06-19T12:11:24.378678",
+      "file_name_image": "image_c1_2025-06-17_18-37-55.jpg",
+      "size_compare": {
+        "current_day_px": 203888,
+        "growth": -1
+      },
+      "disease_class": {
+        "id": 2,
+        "name": "Apple___Cedar_apple_rust"
+      }
+    },
+    {
+      "date": "2025-06-19T12:11:34.521897",
+      "file_name_image": "image_c1_2025-06-17_18-41-30.jpg",
+      "size_compare": {
+        "current_day_px": 202834,
+        "growth": -1
+      },
+      "disease_class": {
+        "id": 2,
+        "name": "Apple___Cedar_apple_rust"
+      }
+    },
+    {
+      "date": "2025-06-19T12:11:44.174851",
+      "file_name_image": "image_c1_2025-06-17_18-45-11.jpg",
+      "size_compare": {
+        "current_day_px": 214247,
+        "growth": 1
+      },
+      "disease_class": {
+        "id": 2,
+        "name": "Apple___Cedar_apple_rust"
+      }
+    },
+    {
+      "date": "2025-06-19T12:11:53.892313",
+      "file_name_image": "image_c1_2025-06-17_18-49-48.jpg",
+      "size_compare": {
+        "current_day_px": 212350,
+        "growth": -1
+      },
+      "disease_class": {
+        "id": 2,
+        "name": "Apple___Cedar_apple_rust"
+      }
+    },
+    {
+      "date": "2025-06-19T12:12:01.412762",
+      "file_name_image": "image_c1_2025-06-18_18-16-25.jpg",
+      "size_compare": {
+        "current_day_px": 177945,
+        "growth": -1
+      },
+      "disease_class": {
+        "id": 2,
+        "name": "Apple___Cedar_apple_rust"
+      }
+    },
+    {
+      "date": "2025-06-19T12:12:06.971193",
+      "file_name_image": "image_c1_2025-06-18_18-39-49.jpg",
+      "size_compare": {
+        "current_day_px": 181754,
+        "growth": 1
+      },
+      "disease_class": {
+        "id": 2,
+        "name": "Apple___Cedar_apple_rust"
+      }
+    },
+    {
+      "date": "2025-06-19T12:12:14.315038",
+      "file_name_image": "image_c1_2025-06-18_20-08-24.jpg",
+      "size_compare": {
+        "current_day_px": 218758,
         "growth": 1
       },
       "disease_class": {

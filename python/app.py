@@ -20,7 +20,7 @@ ACT_KEY          = os.getenv("ACT_S3_KEY", ACTUATOR_FILE)
 AWS_REGION       = os.getenv("AWS_REGION")
 
 S3_PREFIX        = "plant_images/"
-CHECK_INTERVAL   = 15          # seconds
+CHECK_INTERVAL   = 5          # seconds
 
 # Initialize S3 client
 s3_client = boto3.client(
@@ -128,6 +128,7 @@ def latest_image_key_s3():
 def watch_for_new_images():
     while True:
         try:
+            # Liste toutes les images image_c*.jpg
             resp = s3_client.list_objects_v2(Bucket=BUCKET, Prefix="image_c")
             if "Contents" not in resp:
                 time.sleep(CHECK_INTERVAL)
@@ -138,10 +139,7 @@ def watch_for_new_images():
                 if obj["Key"].lower().endswith((".jpg", ".jpeg", ".png"))
             ]
 
-            image_keys.sort(
-                key=lambda key: s3_client.head_object(Bucket=BUCKET, Key=key)["LastModified"]
-            )
-
+            # Vérifie celles déjà traitées
             already_processed = set()
             if os.path.exists(PLANT_DATA_FILE):
                 with open(PLANT_DATA_FILE, "r") as f:
@@ -150,28 +148,26 @@ def watch_for_new_images():
                         for e in entries:
                             already_processed.add(os.path.basename(e["file_name_image"]))
 
-            # 🚀 ici on traite TOUTES les images non encore vues
-            for key in image_keys:
-                if os.path.basename(key) in already_processed:
-                    continue
+            unprocessed = [
+                key for key in image_keys if os.path.basename(key) not in already_processed
+            ]
 
+            # Si au moins une image non traitée → appeler /api/process-all
+            if unprocessed:
                 try:
-                    res = requests.post("http://localhost:5500/api/process-latest", timeout=10)
+                    res = requests.post("http://localhost:5500/api/process-all", timeout=60)
                     if res.ok:
-                        app.logger.info(f"Image processed: {key}")
+                        app.logger.info("[AUTO] Traitement des images via /api/process-all")
                     else:
-                        app.logger.warning(f"Failed to process: {key} – {res.status_code}")
+                        app.logger.warning(f"[AUTO] Echec /api/process-all: {res.status_code}")
                 except Exception as e:
-                    app.logger.error(f"Request failed for image {key}: {e}")
-
-                time.sleep(2)  # petit délai entre chaque image
+                    app.logger.error(f"[AUTO] Erreur requête /api/process-all: {e}")
 
         except Exception as e:
-            app.logger.error(f"Watcher error: {e}")
+            app.logger.error(f"[WATCHER ERROR] {e}")
 
-        # 🔁 on ne dort qu'après avoir tout traité
+        # ⏱ Pause avant prochaine vérification
         time.sleep(CHECK_INTERVAL)
-
 # def watch_for_new_images():
 #     global _last_key_seen
 #     while True:
@@ -305,6 +301,16 @@ def plant_data_s3():
     try:
         obj = s3_client.get_object(Bucket=BUCKET, Key=PLANT_DATA_FILE)
         return jsonify(json.loads(obj["Body"].read().decode())), 200
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
+
+from plant_analysis import process_all_unprocessed_images
+
+@app.post("/api/process-all")
+def api_process_all_images():
+    try:
+        result = process_all_unprocessed_images()
+        return jsonify(result), 200
     except Exception as e:
         return jsonify({"error": str(e)}), 500
 

@@ -321,3 +321,37 @@ def run_manual_analysis(image_key: str, label="manual"):
 
     send_mqtt_message(new_entry, plant_name)
     print(f"[OK] Manually added {image_key}")
+
+def process_all_unprocessed_images():
+    print("[START] Scanning for unprocessed images...")
+
+    history = download_json(JSON_S3_KEY, LOCAL_JSON)
+    processed_filenames = {
+        os.path.basename(e["file_name_image"])
+        for entries in history.values() for e in entries
+    }
+
+    response = s3.list_objects_v2(Bucket=BUCKET_NAME, Prefix="image_c")
+    if "Contents" not in response:
+        return {"message": "No images found in S3", "processed": 0}
+
+    image_keys = sorted(
+        [obj["Key"] for obj in response["Contents"] if obj["Key"].lower().endswith((".jpg", ".jpeg", ".png"))],
+        key=lambda key: s3.head_object(Bucket=BUCKET_NAME, Key=key)["LastModified"]
+    )
+
+    count = 0
+    for image_key in image_keys:
+        filename = os.path.basename(image_key)
+        if filename in processed_filenames:
+            continue
+
+        print(f"[PROCESSING] {image_key}")
+        try:
+            run_manual_analysis(image_key)
+            count += 1
+        except Exception as e:
+            print(f"[ERROR] Failed to process {image_key}: {e}")
+
+    return {"message": "Processing complete", "processed": count}
+
