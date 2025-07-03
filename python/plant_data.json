@@ -375,1265 +375,1152 @@
   ],
   "Cucumber": [
     {
-      "date": "2025-06-24 17:46:12",
-      "file_name_image": "rectangular-3.jpg",
-      "s3_ident": "rectangular-3.jpg@2025-06-24T17:46:12+00:00",
+      "global_current_px": 0,
+      "difference_global_growth": 0,
+      "difference_global_growth_pct": 0.0,
+      "id": 999,
+      "disease_class": {
+        "id": 999,
+        "name": "Tomato___Early_blight"
+      },
+      "images": [
+        {
+          "file_name_image": "257_1_2025-06-29_23-36-15.jpg",
+          "date": "2025-06-29 20:36:18",
+          "s3_ident": "257_1_2025-06-29_23-36-15.jpg@2025-06-29T20:36:18+00:00",
+          "current_day_px": 0,
+          "growth": 0,
+          "growth_pourcentage": 0.0
+        },
+        {
+          "file_name_image": "257_2_2025-06-29_23-36-16.jpg",
+          "date": "2025-06-29 20:36:19",
+          "s3_ident": "257_2_2025-06-29_23-36-16.jpg@2025-06-29T20:36:19+00:00",
+          "current_day_px": 0,
+          "growth": 0,
+          "growth_pourcentage": 0.0
+        }
+      ]
+    },
+    {
+      "global_current_px": 0,
+      "difference_global_growth": 0,
+      "difference_global_growth_pct": 0.0,
+      "id": 999,
+      "disease_class": {
+        "id": 999,
+        "name": "Apple___Black_rot"
+      },
+      "images": [
+        {
+          "file_name_image": "259_1_2025-06-29_23-54-03.jpg",
+          "date": "2025-06-29 20:54:05",
+          "s3_ident": "259_1_2025-06-29_23-54-03.jpg@2025-06-29T20:54:05+00:00",
+          "current_day_px": 0,
+          "growth": 0,
+          "growth_pourcentage": 0.0
+        },
+        {
+          "file_name_image": "259_2_2025-06-29_23-54-03.jpg",
+          "date": "2025-06-29 20:54:07",
+          "s3_ident": "259_2_2025-06-29_23-54-03.jpg@2025-06-29T20:54:07+00:00",
+          "current_day_px": 0,
+          "growth": 0,
+          "growth_pourcentage": 0.0
+        }
+      ]
+    },
+    {
+      "global_current_px": 0,
+      "difference_global_growth": 0,
+      "difference_global_growth_pct": 0.0,
+      "id": 999,
+      "disease_class": {
+        "id": 999,
+        "name": "Apple___Black_rot"
+      },
+      "images": [
+        {
+          "file_name_image": "261_1_2025-06-30_00-01-05.jpg",
+          "date": "2025-06-29 21:01:07",
+          "s3_ident": "261_1_2025-06-30_00-01-05.jpg@2025-06-29T21:01:07+00:00",
+          "current_day_px": 0,
+          "growth": 0,
+          "growth_pourcentage": 0.0
+        },
+        {
+          "file_name_image": "261_2_2025-06-30_00-01-05.jpg",
+          "date": "2025-06-29 21:01:09",
+          "s3_ident": "261_2_2025-06-30_00-01-05.jpg@2025-06-29T21:01:09+00:00",
+          "current_day_px": 0,
+          "growth": 0,
+          "growth_pourcentage": 0.0
+        }
+      ]
+    },
+    {
+      "global_current_px": 0,
+      "difference_global_growth": 0,
+      "difference_global_growth_pct": 0.0,
+      "id": 999,
       "disease_class": {
         "id": 999,
         "name": "Peach___healthy"
       },
-      "size_compare": {
-        "current_day_px": 414498,
-        "growth": 0
-      }
+      "images": [
+        {
+          "file_name_image": "263_1_2025-06-30_16-07-55.jpg",
+          "date": "2025-06-30 13:07:58",
+          "s3_ident": "263_1_2025-06-30_16-07-55.jpg@2025-06-30T13:07:58+00:00",
+          "current_day_px": 0,
+          "growth": 0,
+          "growth_pourcentage": 0.0
+        },
+        {
+          "file_name_image": "263_2_2025-06-30_16-07-56.jpg",
+          "date": "2025-06-30 13:08:31",
+          "s3_ident": "263_2_2025-06-30_16-07-56.jpg@2025-06-30T13:08:31+00:00",
+          "current_day_px": 0,
+          "growth": 0,
+          "growth_pourcentage": 0.0
+        }
+      ]
     },
     {
-      "date": "2025-06-24 17:46:16",
-      "file_name_image": "rectangular-2.jpg",
-      "s3_ident": "rectangular-2.jpg@2025-06-24T17:46:16+00:00",
+      "global_current_px": 318,
+      "difference_global_growth": 318,
+      "difference_global_growth_pct": 0.0,
+      "id": 999,
       "disease_class": {
         "id": 999,
         "name": "Peach___healthy"
       },
-      "size_compare": {
-        "current_day_px": 206514,
-        "growth": -207984
-      }
+      "images": [
+        {
+          "file_name_image": "265_1_2025-06-30_22-09-14.jpg",
+          "date": "2025-06-30 19:09:17",
+          "s3_ident": "265_1_2025-06-30_22-09-14.jpg@2025-06-30T19:09:17+00:00",
+          "current_day_px": 318,
+          "growth": 318,
+          "growth_pourcentage": 0.0
+        },
+        {
+          "file_name_image": "265_2_2025-06-30_22-09-15.jpg",
+          "date": "2025-06-30 19:09:19",
+          "s3_ident": "265_2_2025-06-30_22-09-15.jpg@2025-06-30T19:09:19+00:00",
+          "current_day_px": 0,
+          "growth": 0,
+          "growth_pourcentage": 0.0
+        }
+      ]
     },
     {
-      "date": "2025-06-24 17:46:19",
-      "file_name_image": "Circle-7.jpg",
-      "s3_ident": "Circle-7.jpg@2025-06-24T17:46:19+00:00",
-      "disease_class": {
-        "id": 999,
-        "name": "Peach___healthy"
-      },
-      "size_compare": {
-        "current_day_px": 1174443,
-        "growth": 967929
-      }
-    },
-    {
-      "date": "2025-06-24 17:46:22",
-      "file_name_image": "Circle-5.jpg",
-      "s3_ident": "Circle-5.jpg@2025-06-24T17:46:22+00:00",
-      "disease_class": {
-        "id": 999,
-        "name": "Peach___healthy"
-      },
-      "size_compare": {
-        "current_day_px": 622885,
-        "growth": -551558
-      }
-    },
-    {
-      "date": "2025-06-24 17:46:25",
-      "file_name_image": "Circle-8.jpg",
-      "s3_ident": "Circle-8.jpg@2025-06-24T17:46:25+00:00",
-      "disease_class": {
-        "id": 999,
-        "name": "Peach___healthy"
-      },
-      "size_compare": {
-        "current_day_px": 1520499,
-        "growth": 897614
-      }
-    },
-    {
-      "date": "2025-06-24 17:46:28",
-      "file_name_image": "Circle-3.jpg",
-      "s3_ident": "Circle-3.jpg@2025-06-24T17:46:28+00:00",
-      "disease_class": {
-        "id": 999,
-        "name": "Peach___healthy"
-      },
-      "size_compare": {
-        "current_day_px": 214272,
-        "growth": -1306227
-      }
-    },
-    {
-      "date": "2025-06-24 17:46:31",
-      "file_name_image": "Circle-2.jpg",
-      "s3_ident": "Circle-2.jpg@2025-06-24T17:46:31+00:00",
-      "disease_class": {
-        "id": 999,
-        "name": "Peach___healthy"
-      },
-      "size_compare": {
-        "current_day_px": 97820,
-        "growth": -116452
-      }
-    },
-    {
-      "date": "2025-06-24 17:46:34",
-      "file_name_image": "Circle-1.jpg",
-      "s3_ident": "Circle-1.jpg@2025-06-24T17:46:34+00:00",
-      "disease_class": {
-        "id": 999,
-        "name": "Peach___healthy"
-      },
-      "size_compare": {
-        "current_day_px": 29557,
-        "growth": -68263
-      }
-    },
-    {
-      "date": "2025-06-24 17:46:37",
-      "file_name_image": "Circle-6.jpg",
-      "s3_ident": "Circle-6.jpg@2025-06-24T17:46:37+00:00",
-      "disease_class": {
-        "id": 999,
-        "name": "Peach___healthy"
-      },
-      "size_compare": {
-        "current_day_px": 880779,
-        "growth": 851222
-      }
-    },
-    {
-      "date": "2025-06-24 17:46:40",
-      "file_name_image": "Circle-4.jpg",
-      "s3_ident": "Circle-4.jpg@2025-06-24T17:46:40+00:00",
-      "disease_class": {
-        "id": 999,
-        "name": "Peach___healthy"
-      },
-      "size_compare": {
-        "current_day_px": 381652,
-        "growth": -499127
-      }
-    },
-    {
-      "date": "2025-06-24 17:46:43",
-      "file_name_image": "rectangular-4.jpg",
-      "s3_ident": "rectangular-4.jpg@2025-06-24T17:46:43+00:00",
-      "disease_class": {
-        "id": 999,
-        "name": "Peach___healthy"
-      },
-      "size_compare": {
-        "current_day_px": 823424,
-        "growth": 441772
-      }
-    },
-    {
-      "date": "2025-06-24 17:46:46",
-      "file_name_image": "rectangular-1.jpg",
-      "s3_ident": "rectangular-1.jpg@2025-06-24T17:46:46+00:00",
-      "disease_class": {
-        "id": 999,
-        "name": "Peach___healthy"
-      },
-      "size_compare": {
-        "current_day_px": 102837,
-        "growth": 0
-      }
-    },
-    {
-      "date": "2025-06-28 20:10:03",
-      "file_name_image": "image_c0_USB_2025-06-28_23-09-59.jpg",
-      "s3_ident": "image_c0_USB_2025-06-28_23-09-59.jpg@2025-06-28T20:10:03+00:00",
+      "global_current_px": 5078,
+      "difference_global_growth": 4760,
+      "difference_global_growth_pct": 1496.86,
+      "id": 999,
       "disease_class": {
         "id": 999,
         "name": "Corn___Common_rust"
       },
-      "size_compare": {
-        "current_day_px": 22399,
-        "growth": -80438
-      }
+      "images": [
+        {
+          "file_name_image": "267_1_2025-06-30_22-31-23.jpg",
+          "date": "2025-06-30 19:31:25",
+          "s3_ident": "267_1_2025-06-30_22-31-23.jpg@2025-06-30T19:31:25+00:00",
+          "current_day_px": 5078,
+          "growth": 4760,
+          "growth_pourcentage": 1496.86
+        },
+        {
+          "file_name_image": "267_2_2025-06-30_22-31-23.jpg",
+          "date": "2025-06-30 19:31:27",
+          "s3_ident": "267_2_2025-06-30_22-31-23.jpg@2025-06-30T19:31:27+00:00",
+          "current_day_px": 0,
+          "growth": 0,
+          "growth_pourcentage": 0.0
+        }
+      ]
     },
     {
-      "date": "2025-06-28 20:10:09",
-      "file_name_image": "image_c0_RPi_2025-06-28_23-10-00.jpg",
-      "s3_ident": "image_c0_RPi_2025-06-28_23-10-00.jpg@2025-06-28T20:10:09+00:00",
-      "disease_class": {
-        "id": 999,
-        "name": "Peach___healthy"
-      },
-      "size_compare": {
-        "current_day_px": 5236,
-        "growth": -17163
-      }
-    },
-    {
-      "date": "2025-06-28 20:21:59",
-      "file_name_image": "image_c0_USB_2025-06-28_23-21-56.jpg",
-      "s3_ident": "image_c0_USB_2025-06-28_23-21-56.jpg@2025-06-28T20:21:59+00:00",
-      "disease_class": {
-        "id": 999,
-        "name": "Tomato___Early_blight"
-      },
-      "size_compare": {
-        "current_day_px": 0,
-        "growth": -5236
-      }
-    },
-    {
-      "date": "2025-06-28 20:22:01",
-      "file_name_image": "image_c0_RPi_2025-06-28_23-21-57.jpg",
-      "s3_ident": "image_c0_RPi_2025-06-28_23-21-57.jpg@2025-06-28T20:22:01+00:00",
-      "disease_class": {
-        "id": 999,
-        "name": "Peach___healthy"
-      },
-      "size_compare": {
-        "current_day_px": 2435,
-        "growth": 2435
-      }
-    },
-    {
-      "date": "2025-06-28 20:25:21",
-      "file_name_image": "image_c0_USB_2025-06-28_23-25-18.jpg",
-      "s3_ident": "image_c0_USB_2025-06-28_23-25-18.jpg@2025-06-28T20:25:21+00:00",
-      "disease_class": {
-        "id": 999,
-        "name": "Apple___Black_rot"
-      },
-      "size_compare": {
-        "current_day_px": 0,
-        "growth": -2435
-      }
-    },
-    {
-      "date": "2025-06-28 20:25:23",
-      "file_name_image": "image_c0_RPi_2025-06-28_23-25-19.jpg",
-      "s3_ident": "image_c0_RPi_2025-06-28_23-25-19.jpg@2025-06-28T20:25:23+00:00",
-      "disease_class": {
-        "id": 999,
-        "name": "Peach___healthy"
-      },
-      "size_compare": {
-        "current_day_px": 4231,
-        "growth": 4231
-      }
-    },
-    {
-      "date": "2025-06-28 20:41:14",
-      "file_name_image": "image_c0_USB_2025-06-28_23-41-11.jpg",
-      "s3_ident": "image_c0_USB_2025-06-28_23-41-11.jpg@2025-06-28T20:41:14+00:00",
-      "disease_class": {
-        "id": 999,
-        "name": "Apple___Black_rot"
-      },
-      "size_compare": {
-        "current_day_px": 0,
-        "growth": -4231
-      }
-    },
-    {
-      "date": "2025-06-28 20:41:31",
-      "file_name_image": "image_c0_RPi_2025-06-28_23-41-12.jpg",
-      "s3_ident": "image_c0_RPi_2025-06-28_23-41-12.jpg@2025-06-28T20:41:31+00:00",
-      "disease_class": {
-        "id": 999,
-        "name": "Peach___healthy"
-      },
-      "size_compare": {
-        "current_day_px": 9112,
-        "growth": 9112
-      }
-    },
-    {
-      "date": "2025-06-28 21:23:35",
-      "file_name_image": "image_c0_USB_2025-06-29_00-23-32.jpg",
-      "s3_ident": "image_c0_USB_2025-06-29_00-23-32.jpg@2025-06-28T21:23:35+00:00",
-      "disease_class": {
-        "id": 999,
-        "name": "Apple___Black_rot"
-      },
-      "size_compare": {
-        "current_day_px": 0,
-        "growth": -9112
-      }
-    },
-    {
-      "date": "2025-06-28 21:23:58",
-      "file_name_image": "image_c0_RPi_2025-06-29_00-23-32.jpg",
-      "s3_ident": "image_c0_RPi_2025-06-29_00-23-32.jpg@2025-06-28T21:23:58+00:00",
-      "disease_class": {
-        "id": 999,
-        "name": "Peach___healthy"
-      },
-      "size_compare": {
-        "current_day_px": 8020,
-        "growth": 8020
-      }
-    },
-    {
-      "date": "2025-06-28 21:27:05",
-      "file_name_image": "image_c0_USB_2025-06-29_00-27-00.jpg",
-      "s3_ident": "image_c0_USB_2025-06-29_00-27-00.jpg@2025-06-28T21:27:05+00:00",
-      "disease_class": {
-        "id": 999,
-        "name": "Apple___Black_rot"
-      },
-      "size_compare": {
-        "current_day_px": 0,
-        "growth": -8020
-      }
-    },
-    {
-      "date": "2025-06-28 21:27:07",
-      "file_name_image": "image_c0_RPi_2025-06-29_00-27-01.jpg",
-      "s3_ident": "image_c0_RPi_2025-06-29_00-27-01.jpg@2025-06-28T21:27:07+00:00",
-      "disease_class": {
-        "id": 999,
-        "name": "Peach___healthy"
-      },
-      "size_compare": {
-        "current_day_px": 4742,
-        "growth": 4742
-      }
-    },
-    {
-      "date": "2025-06-28 22:12:59",
-      "file_name_image": "image_c0_USB_2025-06-29_01-12-51.jpg",
-      "s3_ident": "image_c0_USB_2025-06-29_01-12-51.jpg@2025-06-28T22:12:59+00:00",
-      "disease_class": {
-        "id": 999,
-        "name": "Tomato___Early_blight"
-      },
-      "size_compare": {
-        "current_day_px": 0,
-        "growth": -4742
-      }
-    },
-    {
-      "date": "2025-06-28 22:13:08",
-      "file_name_image": "image_c0_RPi_2025-06-29_01-12-52.jpg",
-      "s3_ident": "image_c0_RPi_2025-06-29_01-12-52.jpg@2025-06-28T22:13:08+00:00",
-      "disease_class": {
-        "id": 999,
-        "name": "Peach___healthy"
-      },
-      "size_compare": {
-        "current_day_px": 12784,
-        "growth": 12784
-      }
-    },
-    {
-      "date": "2025-06-28 23:40:12",
-      "file_name_image": "image_c0_USB_2025-06-29_02-40-09.jpg",
-      "s3_ident": "image_c0_USB_2025-06-29_02-40-09.jpg@2025-06-28T23:40:12+00:00",
-      "disease_class": {
-        "id": 999,
-        "name": "Tomato___Early_blight"
-      },
-      "size_compare": {
-        "current_day_px": 0,
-        "growth": -12784
-      }
-    },
-    {
-      "date": "2025-06-28 23:40:14",
-      "file_name_image": "image_c0_RPi_2025-06-29_02-40-09.jpg",
-      "s3_ident": "image_c0_RPi_2025-06-29_02-40-09.jpg@2025-06-28T23:40:14+00:00",
-      "disease_class": {
-        "id": 999,
-        "name": "Peach___healthy"
-      },
-      "size_compare": {
-        "current_day_px": 5742,
-        "growth": 5742
-      }
-    },
-    {
-      "date": "2025-06-28 23:48:42",
-      "file_name_image": "image_c0_USB_2025-06-29_02-48-39.jpg",
-      "s3_ident": "image_c0_USB_2025-06-29_02-48-39.jpg@2025-06-28T23:48:42+00:00",
-      "disease_class": {
-        "id": 999,
-        "name": "Tomato___Early_blight"
-      },
-      "size_compare": {
-        "current_day_px": 0,
-        "growth": -5742
-      }
-    },
-    {
-      "date": "2025-06-28 23:48:43",
-      "file_name_image": "image_c0_RPi_2025-06-29_02-48-39.jpg",
-      "s3_ident": "image_c0_RPi_2025-06-29_02-48-39.jpg@2025-06-28T23:48:43+00:00",
-      "disease_class": {
-        "id": 999,
-        "name": "Peach___healthy"
-      },
-      "size_compare": {
-        "current_day_px": 4896,
-        "growth": 4896
-      }
-    },
-    {
-      "date": "2025-06-29 00:18:22",
-      "file_name_image": "image_c0_USB_2025-06-29_03-18-19.jpg",
-      "s3_ident": "image_c0_USB_2025-06-29_03-18-19.jpg@2025-06-29T00:18:22+00:00",
-      "disease_class": {
-        "id": 999,
-        "name": "Tomato___Early_blight"
-      },
-      "size_compare": {
-        "current_day_px": 0,
-        "growth": -4896
-      }
-    },
-    {
-      "date": "2025-06-29 00:18:24",
-      "file_name_image": "image_c0_RPi_2025-06-29_03-18-20.jpg",
-      "s3_ident": "image_c0_RPi_2025-06-29_03-18-20.jpg@2025-06-29T00:18:24+00:00",
-      "disease_class": {
-        "id": 999,
-        "name": "Peach___healthy"
-      },
-      "size_compare": {
-        "current_day_px": 9026,
-        "growth": 9026
-      }
-    },
-    {
-      "date": "2025-06-29 00:41:32",
-      "file_name_image": "image_c0_USB_2025-06-29_03-41-21.jpg",
-      "s3_ident": "image_c0_USB_2025-06-29_03-41-21.jpg@2025-06-29T00:41:32+00:00",
-      "disease_class": {
-        "id": 999,
-        "name": "Tomato___Early_blight"
-      },
-      "size_compare": {
-        "current_day_px": 0,
-        "growth": -9026
-      }
-    },
-    {
-      "date": "2025-06-29 00:41:37",
-      "file_name_image": "image_c0_RPi_2025-06-29_03-41-22.jpg",
-      "s3_ident": "image_c0_RPi_2025-06-29_03-41-22.jpg@2025-06-29T00:41:37+00:00",
-      "disease_class": {
-        "id": 999,
-        "name": "Peach___healthy"
-      },
-      "size_compare": {
-        "current_day_px": 6975,
-        "growth": 6975
-      }
-    },
-    {
-      "date": "2025-06-29 17:38:46",
-      "file_name_image": "image_c0_USB_2025-06-29_20-38-44.jpg",
-      "s3_ident": "image_c0_USB_2025-06-29_20-38-44.jpg@2025-06-29T17:38:46+00:00",
+      "global_current_px": 9813,
+      "difference_global_growth": 4735,
+      "difference_global_growth_pct": 93.25,
+      "id": 999,
       "disease_class": {
         "id": 999,
         "name": "Corn___Common_rust"
       },
-      "size_compare": {
-        "current_day_px": 19988,
-        "growth": 13013
-      }
+      "images": [
+        {
+          "file_name_image": "269_1_2025-06-30_22-47-27.jpg",
+          "date": "2025-06-30 19:47:30",
+          "s3_ident": "269_1_2025-06-30_22-47-27.jpg@2025-06-30T19:47:30+00:00",
+          "current_day_px": 9813,
+          "growth": 4735,
+          "growth_pourcentage": 93.25
+        },
+        {
+          "file_name_image": "269_2_2025-06-30_22-47-28.jpg",
+          "date": "2025-06-30 19:47:32",
+          "s3_ident": "269_2_2025-06-30_22-47-28.jpg@2025-06-30T19:47:32+00:00",
+          "current_day_px": 0,
+          "growth": 0,
+          "growth_pourcentage": 0.0
+        }
+      ]
     },
     {
-      "date": "2025-06-29 17:41:16",
-      "file_name_image": "image_c0_USB_2025-06-29_20-41-14.jpg",
-      "s3_ident": "image_c0_USB_2025-06-29_20-41-14.jpg@2025-06-29T17:41:16+00:00",
-      "disease_class": {
-        "id": 999,
-        "name": "Tomato___Early_blight"
-      },
-      "size_compare": {
-        "current_day_px": 18407,
-        "growth": -1581
-      }
-    },
-    {
-      "date": "2025-06-29 17:42:45",
-      "file_name_image": "image_c0_USB_2025-06-29_20-42-42.jpg",
-      "s3_ident": "image_c0_USB_2025-06-29_20-42-42.jpg@2025-06-29T17:42:45+00:00",
-      "disease_class": {
-        "id": 999,
-        "name": "Tomato___Early_blight"
-      },
-      "size_compare": {
-        "current_day_px": 21140,
-        "growth": 2733
-      }
-    },
-    {
-      "date": "2025-06-29 17:42:47",
-      "file_name_image": "image_c0_RPi_2025-06-29_20-42-42.jpg",
-      "s3_ident": "image_c0_RPi_2025-06-29_20-42-42.jpg@2025-06-29T17:42:47+00:00",
+      "global_current_px": 0,
+      "difference_global_growth": -9813,
+      "difference_global_growth_pct": -100.0,
+      "id": 999,
       "disease_class": {
         "id": 999,
         "name": "Peach___healthy"
       },
-      "size_compare": {
-        "current_day_px": 5769,
-        "growth": -15371
-      }
+      "images": [
+        {
+          "file_name_image": "271_1_2025-06-30_22-59-13.jpg",
+          "date": "2025-06-30 19:59:16",
+          "s3_ident": "271_1_2025-06-30_22-59-13.jpg@2025-06-30T19:59:16+00:00",
+          "current_day_px": 0,
+          "growth": -9813,
+          "growth_pourcentage": -100.0
+        },
+        {
+          "file_name_image": "271_2_2025-06-30_22-59-14.jpg",
+          "date": "2025-06-30 19:59:17",
+          "s3_ident": "271_2_2025-06-30_22-59-14.jpg@2025-06-30T19:59:17+00:00",
+          "current_day_px": 0,
+          "growth": 0,
+          "growth_pourcentage": 0.0
+        }
+      ]
     },
     {
-      "date": "2025-06-29 17:44:16",
-      "file_name_image": "image_c0_USB_2025-06-29_20-44-13.jpg",
-      "s3_ident": "image_c0_USB_2025-06-29_20-44-13.jpg@2025-06-29T17:44:16+00:00",
-      "disease_class": {
-        "id": 999,
-        "name": "Tomato___Early_blight"
-      },
-      "size_compare": {
-        "current_day_px": 19065,
-        "growth": 13296
-      }
-    },
-    {
-      "date": "2025-06-29 17:45:50",
-      "file_name_image": "image_c0_USB_2025-06-29_20-45-47.jpg",
-      "s3_ident": "image_c0_USB_2025-06-29_20-45-47.jpg@2025-06-29T17:45:50+00:00",
-      "disease_class": {
-        "id": 999,
-        "name": "Tomato___Early_blight"
-      },
-      "size_compare": {
-        "current_day_px": 18641,
-        "growth": -424
-      }
-    },
-    {
-      "date": "2025-06-29 17:45:52",
-      "file_name_image": "image_c0_RPi_2025-06-29_20-45-48.jpg",
-      "s3_ident": "image_c0_RPi_2025-06-29_20-45-48.jpg@2025-06-29T17:45:52+00:00",
-      "disease_class": {
-        "id": 999,
-        "name": "Tomato___Early_blight"
-      },
-      "size_compare": {
-        "current_day_px": 2058,
-        "growth": -16583
-      }
-    },
-    {
-      "date": "2025-06-29 17:55:49",
-      "file_name_image": "image_c0_USB_2025-06-29_20-55-46.jpg",
-      "s3_ident": "image_c0_USB_2025-06-29_20-55-46.jpg@2025-06-29T17:55:49+00:00",
-      "disease_class": {
-        "id": 999,
-        "name": "Tomato___Early_blight"
-      },
-      "size_compare": {
-        "current_day_px": 35246,
-        "growth": 33188
-      }
-    },
-    {
-      "date": "2025-06-29 17:55:51",
-      "file_name_image": "image_c0_RPi_2025-06-29_20-55-46.jpg",
-      "s3_ident": "image_c0_RPi_2025-06-29_20-55-46.jpg@2025-06-29T17:55:51+00:00",
-      "disease_class": {
-        "id": 999,
-        "name": "Peach___healthy"
-      },
-      "size_compare": {
-        "current_day_px": 4168,
-        "growth": -31078
-      }
-    },
-    {
-      "date": "2025-06-29 18:02:24",
-      "file_name_image": "image_c0_USB_2025-06-29_21-02-21.jpg",
-      "s3_ident": "image_c0_USB_2025-06-29_21-02-21.jpg@2025-06-29T18:02:24+00:00",
-      "disease_class": {
-        "id": 999,
-        "name": "Tomato___Early_blight"
-      },
-      "size_compare": {
-        "current_day_px": 21468,
-        "growth": 17300
-      }
-    },
-    {
-      "date": "2025-06-29 18:02:26",
-      "file_name_image": "image_c0_RPi_2025-06-29_21-02-22.jpg",
-      "s3_ident": "image_c0_RPi_2025-06-29_21-02-22.jpg@2025-06-29T18:02:26+00:00",
-      "disease_class": {
-        "id": 999,
-        "name": "Peach___healthy"
-      },
-      "size_compare": {
-        "current_day_px": 0,
-        "growth": -21468
-      }
-    },
-    {
-      "date": "2025-06-29 18:04:15",
-      "file_name_image": "image_c0_USB_2025-06-29_21-04-12.jpg",
-      "s3_ident": "image_c0_USB_2025-06-29_21-04-12.jpg@2025-06-29T18:04:15+00:00",
-      "disease_class": {
-        "id": 999,
-        "name": "Tomato___Early_blight"
-      },
-      "size_compare": {
-        "current_day_px": 16786,
-        "growth": 16786
-      }
-    },
-    {
-      "date": "2025-06-29 18:04:17",
-      "file_name_image": "image_c0_RPi_2025-06-29_21-04-13.jpg",
-      "s3_ident": "image_c0_RPi_2025-06-29_21-04-13.jpg@2025-06-29T18:04:17+00:00",
-      "disease_class": {
-        "id": 999,
-        "name": "Peach___healthy"
-      },
-      "size_compare": {
-        "current_day_px": 0,
-        "growth": -16786
-      }
-    },
-    {
-      "date": "2025-06-29 18:07:48",
-      "file_name_image": "image_c0_USB_2025-06-29_21-07-45.jpg",
-      "s3_ident": "image_c0_USB_2025-06-29_21-07-45.jpg@2025-06-29T18:07:48+00:00",
+      "global_current_px": 4922,
+      "difference_global_growth": 4922,
+      "difference_global_growth_pct": 0.0,
+      "id": 999,
       "disease_class": {
         "id": 999,
         "name": "Corn___Common_rust"
       },
-      "size_compare": {
-        "current_day_px": 35483,
-        "growth": 35483
-      }
+      "images": [
+        {
+          "file_name_image": "273_1_2025-06-30_23-24-32.jpg",
+          "date": "2025-06-30 20:24:35",
+          "s3_ident": "273_1_2025-06-30_23-24-32.jpg@2025-06-30T20:24:35+00:00",
+          "current_day_px": 4922,
+          "growth": 4922,
+          "growth_pourcentage": 0.0
+        },
+        {
+          "file_name_image": "273_2_2025-06-30_23-24-33.jpg",
+          "date": "2025-06-30 20:24:36",
+          "s3_ident": "273_2_2025-06-30_23-24-33.jpg@2025-06-30T20:24:36+00:00",
+          "current_day_px": 0,
+          "growth": 0,
+          "growth_pourcentage": 0.0
+        }
+      ]
     },
     {
-      "date": "2025-06-29 18:36:40",
-      "file_name_image": "image_c0_USB_2025-06-29_21-36-38.jpg",
-      "s3_ident": "image_c0_USB_2025-06-29_21-36-38.jpg@2025-06-29T18:36:40+00:00",
+      "global_current_px": 6865,
+      "difference_global_growth": 1943,
+      "difference_global_growth_pct": 39.48,
+      "id": 999,
       "disease_class": {
         "id": 999,
-        "name": "Tomato___Early_blight"
+        "name": "Corn___Common_rust"
       },
-      "size_compare": {
-        "current_day_px": 19290,
-        "growth": -16193
-      }
+      "images": [
+        {
+          "file_name_image": "275_1_2025-06-30_23-49-10.jpg",
+          "date": "2025-06-30 20:49:12",
+          "s3_ident": "275_1_2025-06-30_23-49-10.jpg@2025-06-30T20:49:12+00:00",
+          "current_day_px": 6865,
+          "growth": 1943,
+          "growth_pourcentage": 39.48
+        },
+        {
+          "file_name_image": "275_2_2025-06-30_23-49-11.jpg",
+          "date": "2025-06-30 20:49:16",
+          "s3_ident": "275_2_2025-06-30_23-49-11.jpg@2025-06-30T20:49:16+00:00",
+          "current_day_px": 0,
+          "growth": 0,
+          "growth_pourcentage": 0.0
+        }
+      ]
     },
     {
-      "date": "2025-06-29 19:22:46",
-      "file_name_image": "image_c0_USB_2025-06-29_22-22-43.jpg",
-      "s3_ident": "image_c0_USB_2025-06-29_22-22-43.jpg@2025-06-29T19:22:46+00:00",
+      "global_current_px": 5135,
+      "difference_global_growth": -1730,
+      "difference_global_growth_pct": -25.2,
+      "id": 999,
+      "disease_class": {
+        "id": 999,
+        "name": "Corn___Common_rust"
+      },
+      "images": [
+        {
+          "file_name_image": "277_1_2025-07-01_00-10-03.jpg",
+          "date": "2025-06-30 21:10:06",
+          "s3_ident": "277_1_2025-07-01_00-10-03.jpg@2025-06-30T21:10:06+00:00",
+          "current_day_px": 5135,
+          "growth": -1730,
+          "growth_pourcentage": -25.2
+        },
+        {
+          "file_name_image": "277_2_2025-07-01_00-10-04.jpg",
+          "date": "2025-06-30 21:10:07",
+          "s3_ident": "277_2_2025-07-01_00-10-04.jpg@2025-06-30T21:10:07+00:00",
+          "current_day_px": 0,
+          "growth": 0,
+          "growth_pourcentage": 0.0
+        }
+      ]
+    },
+    {
+      "global_current_px": 4381,
+      "difference_global_growth": -754,
+      "difference_global_growth_pct": -14.68,
+      "id": 999,
+      "disease_class": {
+        "id": 999,
+        "name": "Corn___Common_rust"
+      },
+      "images": [
+        {
+          "file_name_image": "279_1_2025-07-01_00-30-18.jpg",
+          "date": "2025-06-30 21:30:21",
+          "s3_ident": "279_1_2025-07-01_00-30-18.jpg@2025-06-30T21:30:21+00:00",
+          "current_day_px": 4381,
+          "growth": -754,
+          "growth_pourcentage": -14.68
+        },
+        {
+          "file_name_image": "279_2_2025-07-01_00-30-19.jpg",
+          "date": "2025-06-30 21:30:24",
+          "s3_ident": "279_2_2025-07-01_00-30-19.jpg@2025-06-30T21:30:24+00:00",
+          "current_day_px": 0,
+          "growth": 0,
+          "growth_pourcentage": 0.0
+        }
+      ]
+    },
+    {
+      "global_current_px": 26661,
+      "difference_global_growth": 22280,
+      "difference_global_growth_pct": 508.56,
+      "id": 999,
+      "disease_class": {
+        "id": 999,
+        "name": "Corn___Common_rust"
+      },
+      "images": [
+        {
+          "file_name_image": "281_1_2025-07-01_00-42-57.jpg",
+          "date": "2025-06-30 21:43:00",
+          "s3_ident": "281_1_2025-07-01_00-42-57.jpg@2025-06-30T21:43:00+00:00",
+          "current_day_px": 26661,
+          "growth": 22280,
+          "growth_pourcentage": 508.56
+        },
+        {
+          "file_name_image": "281_2_2025-07-01_00-42-58.jpg",
+          "date": "2025-06-30 21:43:01",
+          "s3_ident": "281_2_2025-07-01_00-42-58.jpg@2025-06-30T21:43:01+00:00",
+          "current_day_px": 0,
+          "growth": 0,
+          "growth_pourcentage": 0.0
+        }
+      ]
+    },
+    {
+      "global_current_px": 0,
+      "difference_global_growth": -26661,
+      "difference_global_growth_pct": -100.0,
+      "id": 999,
       "disease_class": {
         "id": 999,
         "name": "Apple___Black_rot"
       },
-      "size_compare": {
-        "current_day_px": 0,
-        "growth": -19290
-      }
+      "images": [
+        {
+          "file_name_image": "283_1_2025-07-01_01-21-58.jpg",
+          "date": "2025-06-30 22:22:01",
+          "s3_ident": "283_1_2025-07-01_01-21-58.jpg@2025-06-30T22:22:01+00:00",
+          "current_day_px": 0,
+          "growth": -26661,
+          "growth_pourcentage": -100.0
+        },
+        {
+          "file_name_image": "283_2_2025-07-01_01-21-59.jpg",
+          "date": "2025-06-30 22:22:02",
+          "s3_ident": "283_2_2025-07-01_01-21-59.jpg@2025-06-30T22:22:02+00:00",
+          "current_day_px": 0,
+          "growth": 0,
+          "growth_pourcentage": 0.0
+        }
+      ]
     },
     {
-      "date": "2025-06-29 20:08:55",
-      "file_name_image": "image_c0_USB_2025-06-29_23-08-53.jpg",
-      "s3_ident": "image_c0_USB_2025-06-29_23-08-53.jpg@2025-06-29T20:08:55+00:00",
+      "global_current_px": 0,
+      "difference_global_growth": 0,
+      "difference_global_growth_pct": 0.0,
+      "id": 999,
       "disease_class": {
         "id": 999,
         "name": "Apple___Black_rot"
       },
-      "size_compare": {
-        "current_day_px": 0,
-        "growth": 0
-      }
+      "images": [
+        {
+          "file_name_image": "285_1_2025-07-01_01-53-27.jpg",
+          "date": "2025-06-30 22:53:29",
+          "s3_ident": "285_1_2025-07-01_01-53-27.jpg@2025-06-30T22:53:29+00:00",
+          "current_day_px": 0,
+          "growth": 0,
+          "growth_pourcentage": 0.0
+        },
+        {
+          "file_name_image": "285_2_2025-07-01_01-53-27.jpg",
+          "date": "2025-06-30 22:53:31",
+          "s3_ident": "285_2_2025-07-01_01-53-27.jpg@2025-06-30T22:53:31+00:00",
+          "current_day_px": 0,
+          "growth": 0,
+          "growth_pourcentage": 0.0
+        }
+      ]
     },
     {
-      "date": "2025-06-29 20:36:18",
-      "file_name_image": "257_1_2025-06-29_23-36-15.jpg",
-      "s3_ident": "257_1_2025-06-29_23-36-15.jpg@2025-06-29T20:36:18+00:00",
-      "disease_class": {
-        "id": 999,
-        "name": "Tomato___Early_blight"
-      },
-      "size_compare": {
-        "current_day_px": 0,
-        "growth": 0
-      }
-    },
-    {
-      "date": "2025-06-29 20:36:19",
-      "file_name_image": "257_2_2025-06-29_23-36-16.jpg",
-      "s3_ident": "257_2_2025-06-29_23-36-16.jpg@2025-06-29T20:36:19+00:00",
+      "global_current_px": 0,
+      "difference_global_growth": 0,
+      "difference_global_growth_pct": 0.0,
+      "id": 999,
       "disease_class": {
         "id": 999,
         "name": "Peach___healthy"
       },
-      "size_compare": {
-        "current_day_px": 3105,
-        "growth": 3105
-      }
+      "images": [
+        {
+          "file_name_image": "287_1_2025-07-01_02-34-06.jpg",
+          "date": "2025-06-30 23:34:09",
+          "s3_ident": "287_1_2025-07-01_02-34-06.jpg@2025-06-30T23:34:09+00:00",
+          "current_day_px": 0,
+          "growth": 0,
+          "growth_pourcentage": 0.0
+        },
+        {
+          "file_name_image": "287_2_2025-07-01_02-34-07.jpg",
+          "date": "2025-06-30 23:34:10",
+          "s3_ident": "287_2_2025-07-01_02-34-07.jpg@2025-06-30T23:34:10+00:00",
+          "current_day_px": 0,
+          "growth": 0,
+          "growth_pourcentage": 0.0
+        }
+      ]
     },
     {
-      "date": "2025-06-29 20:54:05",
-      "file_name_image": "259_1_2025-06-29_23-54-03.jpg",
-      "s3_ident": "259_1_2025-06-29_23-54-03.jpg@2025-06-29T20:54:05+00:00",
+      "global_current_px": 0,
+      "difference_global_growth": 0,
+      "difference_global_growth_pct": 0.0,
+      "id": 999,
+      "disease_class": {
+        "id": 999,
+        "name": "Peach___healthy"
+      },
+      "images": [
+        {
+          "file_name_image": "289_1_2025-07-01_02-42-21.jpg",
+          "date": "2025-06-30 23:42:24",
+          "s3_ident": "289_1_2025-07-01_02-42-21.jpg@2025-06-30T23:42:24+00:00",
+          "current_day_px": 0,
+          "growth": 0,
+          "growth_pourcentage": 0.0
+        },
+        {
+          "file_name_image": "289_2_2025-07-01_02-42-22.jpg",
+          "date": "2025-06-30 23:42:26",
+          "s3_ident": "289_2_2025-07-01_02-42-22.jpg@2025-06-30T23:42:26+00:00",
+          "current_day_px": 0,
+          "growth": 0,
+          "growth_pourcentage": 0.0
+        }
+      ]
+    },
+    {
+      "global_current_px": 1210,
+      "difference_global_growth": 1210,
+      "difference_global_growth_pct": 0.0,
+      "id": 999,
+      "disease_class": {
+        "id": 999,
+        "name": "Peach___healthy"
+      },
+      "images": [
+        {
+          "file_name_image": "291_1_2025-07-01_18-40-08.jpg",
+          "date": "2025-07-01 15:40:11",
+          "s3_ident": "291_1_2025-07-01_18-40-08.jpg@2025-07-01T15:40:11+00:00",
+          "current_day_px": 0,
+          "growth": 0,
+          "growth_pourcentage": 0.0
+        },
+        {
+          "file_name_image": "291_2_2025-07-01_18-40-09.jpg",
+          "date": "2025-07-01 15:40:12",
+          "s3_ident": "291_2_2025-07-01_18-40-09.jpg@2025-07-01T15:40:12+00:00",
+          "current_day_px": 1210,
+          "growth": 1210,
+          "growth_pourcentage": 0.0
+        }
+      ]
+    },
+    {
+      "global_current_px": 18252,
+      "difference_global_growth": 17042,
+      "difference_global_growth_pct": 1408.43,
+      "id": 999,
+      "disease_class": {
+        "id": 999,
+        "name": "Peach___healthy"
+      },
+      "images": [
+        {
+          "file_name_image": "293_1_2025-07-01_18-52-56.jpg",
+          "date": "2025-07-01 15:52:59",
+          "s3_ident": "293_1_2025-07-01_18-52-56.jpg@2025-07-01T15:52:59+00:00",
+          "current_day_px": 15003,
+          "growth": 15003,
+          "growth_pourcentage": 0.0
+        },
+        {
+          "file_name_image": "293_2_2025-07-01_18-52-57.jpg",
+          "date": "2025-07-01 15:53:01",
+          "s3_ident": "293_2_2025-07-01_18-52-57.jpg@2025-07-01T15:53:01+00:00",
+          "current_day_px": 3249,
+          "growth": 2039,
+          "growth_pourcentage": 168.51
+        }
+      ]
+    },
+    {
+      "global_current_px": 78701,
+      "difference_global_growth": 60449,
+      "difference_global_growth_pct": 331.19,
+      "id": 999,
+      "disease_class": {
+        "id": 999,
+        "name": "Peach___healthy"
+      },
+      "images": [
+        {
+          "file_name_image": "295_1_2025-07-01_18-54-37.jpg",
+          "date": "2025-07-01 15:54:40",
+          "s3_ident": "295_1_2025-07-01_18-54-37.jpg@2025-07-01T15:54:40+00:00",
+          "current_day_px": 75541,
+          "growth": 60538,
+          "growth_pourcentage": 403.51
+        },
+        {
+          "file_name_image": "295_2_2025-07-01_18-54-38.jpg",
+          "date": "2025-07-01 15:54:41",
+          "s3_ident": "295_2_2025-07-01_18-54-38.jpg@2025-07-01T15:54:41+00:00",
+          "current_day_px": 3160,
+          "growth": -89,
+          "growth_pourcentage": -2.74
+        }
+      ]
+    },
+    {
+      "global_current_px": 16686,
+      "difference_global_growth": -62015,
+      "difference_global_growth_pct": -78.8,
+      "id": 999,
+      "disease_class": {
+        "id": 999,
+        "name": "Peach___healthy"
+      },
+      "images": [
+        {
+          "file_name_image": "297_1_2025-07-01_19-12-32.jpg",
+          "date": "2025-07-01 16:12:35",
+          "s3_ident": "297_1_2025-07-01_19-12-32.jpg@2025-07-01T16:12:35+00:00",
+          "current_day_px": 9538,
+          "growth": -66003,
+          "growth_pourcentage": -87.37
+        },
+        {
+          "file_name_image": "297_2_2025-07-01_19-12-33.jpg",
+          "date": "2025-07-01 16:12:37",
+          "s3_ident": "297_2_2025-07-01_19-12-33.jpg@2025-07-01T16:12:37+00:00",
+          "current_day_px": 7148,
+          "growth": 3988,
+          "growth_pourcentage": 126.2
+        }
+      ]
+    },
+    {
+      "global_current_px": 21264,
+      "difference_global_growth": 4578,
+      "difference_global_growth_pct": 27.44,
+      "id": 999,
       "disease_class": {
         "id": 999,
         "name": "Apple___Black_rot"
       },
-      "size_compare": {
-        "current_day_px": 0,
-        "growth": -3105
-      }
+      "images": [
+        {
+          "file_name_image": "299_1_2025-07-01_19-27-24.jpg",
+          "date": "2025-07-01 16:27:27",
+          "s3_ident": "299_1_2025-07-01_19-27-24.jpg@2025-07-01T16:27:27+00:00",
+          "current_day_px": 13744,
+          "growth": 4206,
+          "growth_pourcentage": 44.1
+        },
+        {
+          "file_name_image": "299_2_2025-07-01_19-27-25.jpg",
+          "date": "2025-07-01 16:27:29",
+          "s3_ident": "299_2_2025-07-01_19-27-25.jpg@2025-07-01T16:27:29+00:00",
+          "current_day_px": 7520,
+          "growth": 372,
+          "growth_pourcentage": 5.2
+        }
+      ]
     },
     {
-      "date": "2025-06-29 20:54:07",
-      "file_name_image": "259_2_2025-06-29_23-54-03.jpg",
-      "s3_ident": "259_2_2025-06-29_23-54-03.jpg@2025-06-29T20:54:07+00:00",
+      "global_current_px": 176211,
+      "difference_global_growth": 154947,
+      "difference_global_growth_pct": 728.68,
+      "id": 999,
       "disease_class": {
         "id": 999,
         "name": "Peach___healthy"
       },
-      "size_compare": {
-        "current_day_px": 8040,
-        "growth": 8040
-      }
+      "images": [
+        {
+          "file_name_image": "301_1_2025-07-01_22-36-13.jpg",
+          "date": "2025-07-01 19:36:16",
+          "s3_ident": "301_1_2025-07-01_22-36-13.jpg@2025-07-01T19:36:16+00:00",
+          "current_day_px": 168781,
+          "growth": 155037,
+          "growth_pourcentage": 1128.03
+        },
+        {
+          "file_name_image": "301_2_2025-07-01_22-36-14.jpg",
+          "date": "2025-07-01 19:36:18",
+          "s3_ident": "301_2_2025-07-01_22-36-14.jpg@2025-07-01T19:36:18+00:00",
+          "current_day_px": 7430,
+          "growth": -90,
+          "growth_pourcentage": -1.2
+        }
+      ]
     },
     {
-      "date": "2025-06-29 21:01:07",
-      "file_name_image": "261_1_2025-06-30_00-01-05.jpg",
-      "s3_ident": "261_1_2025-06-30_00-01-05.jpg@2025-06-29T21:01:07+00:00",
+      "global_current_px": 0,
+      "difference_global_growth": -176211,
+      "difference_global_growth_pct": -100.0,
+      "id": 999,
+      "disease_class": {
+        "id": 999,
+        "name": "Peach___healthy"
+      },
+      "images": [
+        {
+          "file_name_image": "303_1_2025-07-02_14-28-17.jpg",
+          "date": "2025-07-02 11:28:19",
+          "s3_ident": "303_1_2025-07-02_14-28-17.jpg@2025-07-02T11:28:19+00:00",
+          "current_day_px": 0,
+          "growth": -168781,
+          "growth_pourcentage": -100.0
+        },
+        {
+          "file_name_image": "303_2_2025-07-02_14-28-18.jpg",
+          "date": "2025-07-02 11:28:21",
+          "s3_ident": "303_2_2025-07-02_14-28-18.jpg@2025-07-02T11:28:21+00:00",
+          "current_day_px": 0,
+          "growth": -7430,
+          "growth_pourcentage": -100.0
+        }
+      ]
+    },
+    {
+      "global_current_px": 0,
+      "difference_global_growth": 0,
+      "difference_global_growth_pct": 0.0,
+      "id": 999,
+      "disease_class": {
+        "id": 999,
+        "name": "Peach___healthy"
+      },
+      "images": [
+        {
+          "file_name_image": "305_1_2025-07-02_14-30-08.jpg",
+          "date": "2025-07-02 11:30:11",
+          "s3_ident": "305_1_2025-07-02_14-30-08.jpg@2025-07-02T11:30:11+00:00",
+          "current_day_px": 0,
+          "growth": 0,
+          "growth_pourcentage": 0.0
+        },
+        {
+          "file_name_image": "305_2_2025-07-02_14-30-09.jpg",
+          "date": "2025-07-02 11:30:12",
+          "s3_ident": "305_2_2025-07-02_14-30-09.jpg@2025-07-02T11:30:12+00:00",
+          "current_day_px": 0,
+          "growth": 0,
+          "growth_pourcentage": 0.0
+        }
+      ]
+    },
+    {
+      "global_current_px": 474,
+      "difference_global_growth": 474,
+      "difference_global_growth_pct": 0.0,
+      "id": 999,
+      "disease_class": {
+        "id": 999,
+        "name": "Peach___healthy"
+      },
+      "images": [
+        {
+          "file_name_image": "307_1_2025-07-02_14-54-23.jpg",
+          "date": "2025-07-02 11:54:25",
+          "s3_ident": "307_1_2025-07-02_14-54-23.jpg@2025-07-02T11:54:25+00:00",
+          "current_day_px": 0,
+          "growth": 0,
+          "growth_pourcentage": 0.0
+        },
+        {
+          "file_name_image": "307_2_2025-07-02_14-54-24.jpg",
+          "date": "2025-07-02 11:54:27",
+          "s3_ident": "307_2_2025-07-02_14-54-24.jpg@2025-07-02T11:54:27+00:00",
+          "current_day_px": 474,
+          "growth": 474,
+          "growth_pourcentage": 0.0
+        }
+      ]
+    },
+    {
+      "global_current_px": 0,
+      "difference_global_growth": -474,
+      "difference_global_growth_pct": -100.0,
+      "id": 999,
+      "disease_class": {
+        "id": 999,
+        "name": "Peach___healthy"
+      },
+      "images": [
+        {
+          "file_name_image": "309_1_2025-07-02_14-59-23.jpg",
+          "date": "2025-07-02 11:59:26",
+          "s3_ident": "309_1_2025-07-02_14-59-23.jpg@2025-07-02T11:59:26+00:00",
+          "current_day_px": 0,
+          "growth": 0,
+          "growth_pourcentage": 0.0
+        },
+        {
+          "file_name_image": "309_2_2025-07-02_14-59-24.jpg",
+          "date": "2025-07-02 11:59:28",
+          "s3_ident": "309_2_2025-07-02_14-59-24.jpg@2025-07-02T11:59:28+00:00",
+          "current_day_px": 0,
+          "growth": -474,
+          "growth_pourcentage": -100.0
+        }
+      ]
+    },
+    {
+      "global_current_px": 0,
+      "difference_global_growth": 0,
+      "difference_global_growth_pct": 0.0,
+      "id": 999,
+      "disease_class": {
+        "id": 999,
+        "name": "Peach___healthy"
+      },
+      "images": [
+        {
+          "file_name_image": "311_1_2025-07-02_15-04-54.jpg",
+          "date": "2025-07-02 12:04:57",
+          "s3_ident": "311_1_2025-07-02_15-04-54.jpg@2025-07-02T12:04:57+00:00",
+          "current_day_px": 0,
+          "growth": 0,
+          "growth_pourcentage": 0.0
+        },
+        {
+          "file_name_image": "311_2_2025-07-02_15-04-55.jpg",
+          "date": "2025-07-02 12:04:59",
+          "s3_ident": "311_2_2025-07-02_15-04-55.jpg@2025-07-02T12:04:59+00:00",
+          "current_day_px": 0,
+          "growth": 0,
+          "growth_pourcentage": 0.0
+        }
+      ]
+    },
+    {
+      "global_current_px": 0,
+      "difference_global_growth": 0,
+      "difference_global_growth_pct": 0.0,
+      "id": 999,
+      "disease_class": {
+        "id": 999,
+        "name": "Peach___healthy"
+      },
+      "images": [
+        {
+          "file_name_image": "313_1_2025-07-02_15-07-49.jpg",
+          "date": "2025-07-02 12:07:52",
+          "s3_ident": "313_1_2025-07-02_15-07-49.jpg@2025-07-02T12:07:52+00:00",
+          "current_day_px": 0,
+          "growth": 0,
+          "growth_pourcentage": 0.0
+        },
+        {
+          "file_name_image": "313_2_2025-07-02_15-07-50.jpg",
+          "date": "2025-07-02 12:07:54",
+          "s3_ident": "313_2_2025-07-02_15-07-50.jpg@2025-07-02T12:07:54+00:00",
+          "current_day_px": 0,
+          "growth": 0,
+          "growth_pourcentage": 0.0
+        }
+      ]
+    },
+    {
+      "global_current_px": 0,
+      "difference_global_growth": 0,
+      "difference_global_growth_pct": 0.0,
+      "id": 999,
+      "disease_class": {
+        "id": 999,
+        "name": "Peach___healthy"
+      },
+      "images": [
+        {
+          "file_name_image": "315_1_2025-07-02_15-11-02.jpg",
+          "date": "2025-07-02 12:11:04",
+          "s3_ident": "315_1_2025-07-02_15-11-02.jpg@2025-07-02T12:11:04+00:00",
+          "current_day_px": 0,
+          "growth": 0,
+          "growth_pourcentage": 0.0
+        },
+        {
+          "file_name_image": "315_2_2025-07-02_15-11-02.jpg",
+          "date": "2025-07-02 12:11:06",
+          "s3_ident": "315_2_2025-07-02_15-11-02.jpg@2025-07-02T12:11:06+00:00",
+          "current_day_px": 0,
+          "growth": 0,
+          "growth_pourcentage": 0.0
+        }
+      ]
+    },
+    {
+      "global_current_px": 4305,
+      "difference_global_growth": 4305,
+      "difference_global_growth_pct": 0.0,
+      "id": 999,
+      "disease_class": {
+        "id": 999,
+        "name": "Peach___healthy"
+      },
+      "images": [
+        {
+          "file_name_image": "317_1_2025-07-02_15-12-44.jpg",
+          "date": "2025-07-02 12:12:47",
+          "s3_ident": "317_1_2025-07-02_15-12-44.jpg@2025-07-02T12:12:47+00:00",
+          "current_day_px": 0,
+          "growth": 0,
+          "growth_pourcentage": 0.0
+        },
+        {
+          "file_name_image": "317_2_2025-07-02_15-12-45.jpg",
+          "date": "2025-07-02 12:12:48",
+          "s3_ident": "317_2_2025-07-02_15-12-45.jpg@2025-07-02T12:12:48+00:00",
+          "current_day_px": 4305,
+          "growth": 4305,
+          "growth_pourcentage": 0.0
+        }
+      ]
+    },
+    {
+      "global_current_px": 6031,
+      "difference_global_growth": 1726,
+      "difference_global_growth_pct": 40.09,
+      "id": 999,
+      "disease_class": {
+        "id": 999,
+        "name": "Peach___healthy"
+      },
+      "images": [
+        {
+          "file_name_image": "319_1_2025-07-02_15-20-39.jpg",
+          "date": "2025-07-02 12:20:41",
+          "s3_ident": "319_1_2025-07-02_15-20-39.jpg@2025-07-02T12:20:41+00:00",
+          "current_day_px": 0,
+          "growth": 0,
+          "growth_pourcentage": 0.0
+        },
+        {
+          "file_name_image": "319_2_2025-07-02_15-20-39.jpg",
+          "date": "2025-07-02 12:20:43",
+          "s3_ident": "319_2_2025-07-02_15-20-39.jpg@2025-07-02T12:20:43+00:00",
+          "current_day_px": 6031,
+          "growth": 1726,
+          "growth_pourcentage": 40.09
+        }
+      ]
+    },
+    {
+      "global_current_px": 6191,
+      "difference_global_growth": 160,
+      "difference_global_growth_pct": 2.65,
+      "id": 999,
+      "disease_class": {
+        "id": 999,
+        "name": "Peach___healthy"
+      },
+      "images": [
+        {
+          "file_name_image": "321_1_2025-07-02_15-27-28.jpg",
+          "date": "2025-07-02 12:27:31",
+          "s3_ident": "321_1_2025-07-02_15-27-28.jpg@2025-07-02T12:27:31+00:00",
+          "current_day_px": 0,
+          "growth": 0,
+          "growth_pourcentage": 0.0
+        },
+        {
+          "file_name_image": "321_2_2025-07-02_15-27-29.jpg",
+          "date": "2025-07-02 12:27:32",
+          "s3_ident": "321_2_2025-07-02_15-27-29.jpg@2025-07-02T12:27:32+00:00",
+          "current_day_px": 6191,
+          "growth": 160,
+          "growth_pourcentage": 2.65
+        }
+      ]
+    },
+    {
+      "global_current_px": 5840,
+      "difference_global_growth": -351,
+      "difference_global_growth_pct": -5.67,
+      "id": 999,
+      "disease_class": {
+        "id": 999,
+        "name": "Peach___healthy"
+      },
+      "images": [
+        {
+          "file_name_image": "323_1_2025-07-02_15-29-22.jpg",
+          "date": "2025-07-02 12:29:25",
+          "s3_ident": "323_1_2025-07-02_15-29-22.jpg@2025-07-02T12:29:25+00:00",
+          "current_day_px": 0,
+          "growth": 0,
+          "growth_pourcentage": 0.0
+        },
+        {
+          "file_name_image": "323_2_2025-07-02_15-29-23.jpg",
+          "date": "2025-07-02 12:29:27",
+          "s3_ident": "323_2_2025-07-02_15-29-23.jpg@2025-07-02T12:29:27+00:00",
+          "current_day_px": 5840,
+          "growth": -351,
+          "growth_pourcentage": -5.67
+        }
+      ]
+    },
+    {
+      "global_current_px": 2375,
+      "difference_global_growth": -3465,
+      "difference_global_growth_pct": -59.33,
+      "id": 999,
+      "disease_class": {
+        "id": 999,
+        "name": "Peach___healthy"
+      },
+      "images": [
+        {
+          "file_name_image": "329_1_2025-07-02_18-02-08.jpg",
+          "date": "2025-07-02 15:02:11",
+          "s3_ident": "329_1_2025-07-02_18-02-08.jpg@2025-07-02T15:02:11+00:00",
+          "current_day_px": 0,
+          "growth": 0,
+          "growth_pourcentage": 0.0
+        },
+        {
+          "file_name_image": "329_2_2025-07-02_18-02-09.jpg",
+          "date": "2025-07-02 15:02:12",
+          "s3_ident": "329_2_2025-07-02_18-02-09.jpg@2025-07-02T15:02:12+00:00",
+          "current_day_px": 2375,
+          "growth": -3465,
+          "growth_pourcentage": -59.33
+        }
+      ]
+    },
+    {
+      "global_current_px": 4757,
+      "difference_global_growth": 2382,
+      "difference_global_growth_pct": 100.29,
+      "id": 999,
+      "disease_class": {
+        "id": 999,
+        "name": "Peach___healthy"
+      },
+      "images": [
+        {
+          "file_name_image": "331_1_2025-07-02_18-07-56.jpg",
+          "date": "2025-07-02 15:07:59",
+          "s3_ident": "331_1_2025-07-02_18-07-56.jpg@2025-07-02T15:07:59+00:00",
+          "current_day_px": 2253,
+          "growth": 2253,
+          "growth_pourcentage": 0.0
+        },
+        {
+          "file_name_image": "331_2_2025-07-02_18-07-57.jpg",
+          "date": "2025-07-02 15:08:00",
+          "s3_ident": "331_2_2025-07-02_18-07-57.jpg@2025-07-02T15:08:00+00:00",
+          "current_day_px": 2504,
+          "growth": 129,
+          "growth_pourcentage": 5.43
+        }
+      ]
+    },
+    {
+      "global_current_px": 5700,
+      "difference_global_growth": 943,
+      "difference_global_growth_pct": 19.82,
+      "id": 999,
+      "disease_class": {
+        "id": 999,
+        "name": "Peach___healthy"
+      },
+      "images": [
+        {
+          "file_name_image": "333_1_2025-07-02_18-13-38.jpg",
+          "date": "2025-07-02 15:13:41",
+          "s3_ident": "333_1_2025-07-02_18-13-38.jpg@2025-07-02T15:13:41+00:00",
+          "current_day_px": 2618,
+          "growth": 365,
+          "growth_pourcentage": 16.2
+        },
+        {
+          "file_name_image": "333_2_2025-07-02_18-13-39.jpg",
+          "date": "2025-07-02 15:13:42",
+          "s3_ident": "333_2_2025-07-02_18-13-39.jpg@2025-07-02T15:13:42+00:00",
+          "current_day_px": 3082,
+          "growth": 578,
+          "growth_pourcentage": 23.08
+        }
+      ]
+    },
+    {
+      "global_current_px": 4939,
+      "difference_global_growth": -761,
+      "difference_global_growth_pct": -13.35,
+      "id": 999,
+      "disease_class": {
+        "id": 999,
+        "name": "Peach___healthy"
+      },
+      "images": [
+        {
+          "file_name_image": "339_1_2025-07-02_18-29-58.jpg",
+          "date": "2025-07-02 15:30:00",
+          "s3_ident": "339_1_2025-07-02_18-29-58.jpg@2025-07-02T15:30:00+00:00",
+          "current_day_px": 2398,
+          "growth": -220,
+          "growth_pourcentage": -8.4
+        },
+        {
+          "file_name_image": "339_2_2025-07-02_18-29-58.jpg",
+          "date": "2025-07-02 15:30:01",
+          "s3_ident": "339_2_2025-07-02_18-29-58.jpg@2025-07-02T15:30:01+00:00",
+          "current_day_px": 2541,
+          "growth": -541,
+          "growth_pourcentage": -17.55
+        }
+      ]
+    },
+    {
+      "global_current_px": 6592,
+      "difference_global_growth": 1653,
+      "difference_global_growth_pct": 33.47,
+      "id": 999,
       "disease_class": {
         "id": 999,
         "name": "Apple___Black_rot"
       },
-      "size_compare": {
-        "current_day_px": 0,
-        "growth": -8040
-      }
+      "images": [
+        {
+          "file_name_image": "341_1_2025-07-02_18-33-22.jpg",
+          "date": "2025-07-02 15:33:25",
+          "s3_ident": "341_1_2025-07-02_18-33-22.jpg@2025-07-02T15:33:25+00:00",
+          "current_day_px": 3743,
+          "growth": 1345,
+          "growth_pourcentage": 56.09
+        },
+        {
+          "file_name_image": "341_2_2025-07-02_18-33-23.jpg",
+          "date": "2025-07-02 15:33:27",
+          "s3_ident": "341_2_2025-07-02_18-33-23.jpg@2025-07-02T15:33:27+00:00",
+          "current_day_px": 2849,
+          "growth": 308,
+          "growth_pourcentage": 12.12
+        }
+      ]
     },
     {
-      "date": "2025-06-29 21:01:09",
-      "file_name_image": "261_2_2025-06-30_00-01-05.jpg",
-      "s3_ident": "261_2_2025-06-30_00-01-05.jpg@2025-06-29T21:01:09+00:00",
+      "global_current_px": 0,
+      "difference_global_growth": -6592,
+      "difference_global_growth_pct": -100.0,
+      "id": 999,
       "disease_class": {
         "id": 999,
         "name": "Peach___healthy"
       },
-      "size_compare": {
-        "current_day_px": 8875,
-        "growth": 8875
-      }
+      "images": [
+        {
+          "file_name_image": "347_1_2025-07-02_21-39-58.jpg",
+          "date": "2025-07-02 18:40:01",
+          "s3_ident": "347_1_2025-07-02_21-39-58.jpg@2025-07-02T18:40:01+00:00",
+          "current_day_px": 0,
+          "growth": -3743,
+          "growth_pourcentage": -100.0
+        },
+        {
+          "file_name_image": "347_2_2025-07-02_21-40-00.jpg",
+          "date": "2025-07-02 18:40:03",
+          "s3_ident": "347_2_2025-07-02_21-40-00.jpg@2025-07-02T18:40:03+00:00",
+          "current_day_px": 0,
+          "growth": -2849,
+          "growth_pourcentage": -100.0
+        }
+      ]
     },
     {
-      "date": "2025-06-30 13:07:58",
-      "file_name_image": "263_1_2025-06-30_16-07-55.jpg",
-      "s3_ident": "263_1_2025-06-30_16-07-55.jpg@2025-06-30T13:07:58+00:00",
+      "global_current_px": 0,
+      "difference_global_growth": 0,
+      "difference_global_growth_pct": 0.0,
+      "id": 999,
       "disease_class": {
         "id": 999,
         "name": "Peach___healthy"
       },
-      "size_compare": {
-        "current_day_px": 0,
-        "growth": -8875
-      }
-    },
-    {
-      "date": "2025-06-30 13:08:31",
-      "file_name_image": "263_2_2025-06-30_16-07-56.jpg",
-      "s3_ident": "263_2_2025-06-30_16-07-56.jpg@2025-06-30T13:08:31+00:00",
-      "disease_class": {
-        "id": 999,
-        "name": "Peach___healthy"
-      },
-      "size_compare": {
-        "current_day_px": 5296,
-        "growth": 5296
-      }
-    },
-    {
-      "date": "2025-06-30 19:09:17",
-      "file_name_image": "265_1_2025-06-30_22-09-14.jpg",
-      "s3_ident": "265_1_2025-06-30_22-09-14.jpg@2025-06-30T19:09:17+00:00",
-      "disease_class": {
-        "id": 999,
-        "name": "Peach___healthy"
-      },
-      "size_compare": {
-        "current_day_px": 0,
-        "growth": -5296
-      }
-    },
-    {
-      "date": "2025-06-30 19:09:19",
-      "file_name_image": "265_2_2025-06-30_22-09-15.jpg",
-      "s3_ident": "265_2_2025-06-30_22-09-15.jpg@2025-06-30T19:09:19+00:00",
-      "disease_class": {
-        "id": 999,
-        "name": "Peach___healthy"
-      },
-      "size_compare": {
-        "current_day_px": 4882,
-        "growth": 4882
-      }
-    },
-    {
-      "date": "2025-06-30 19:31:25",
-      "file_name_image": "267_1_2025-06-30_22-31-23.jpg",
-      "s3_ident": "267_1_2025-06-30_22-31-23.jpg@2025-06-30T19:31:25+00:00",
-      "disease_class": {
-        "id": 999,
-        "name": "Corn___Common_rust"
-      },
-      "size_compare": {
-        "current_day_px": 242248,
-        "growth": 237366
-      }
-    },
-    {
-      "date": "2025-06-30 19:31:27",
-      "file_name_image": "267_2_2025-06-30_22-31-23.jpg",
-      "s3_ident": "267_2_2025-06-30_22-31-23.jpg@2025-06-30T19:31:27+00:00",
-      "disease_class": {
-        "id": 999,
-        "name": "Peach___healthy"
-      },
-      "size_compare": {
-        "current_day_px": 2615,
-        "growth": -239633
-      }
-    },
-    {
-      "date": "2025-06-30 19:47:30",
-      "file_name_image": "269_1_2025-06-30_22-47-27.jpg",
-      "s3_ident": "269_1_2025-06-30_22-47-27.jpg@2025-06-30T19:47:30+00:00",
-      "disease_class": {
-        "id": 999,
-        "name": "Corn___Common_rust"
-      },
-      "size_compare": {
-        "current_day_px": 298984,
-        "growth": 296369
-      }
-    },
-    {
-      "date": "2025-06-30 19:47:32",
-      "file_name_image": "269_2_2025-06-30_22-47-28.jpg",
-      "s3_ident": "269_2_2025-06-30_22-47-28.jpg@2025-06-30T19:47:32+00:00",
-      "disease_class": {
-        "id": 999,
-        "name": "Peach___healthy"
-      },
-      "size_compare": {
-        "current_day_px": 4950,
-        "growth": -294034
-      }
-    },
-    {
-      "date": "2025-06-30 19:59:16",
-      "file_name_image": "271_1_2025-06-30_22-59-13.jpg",
-      "s3_ident": "271_1_2025-06-30_22-59-13.jpg@2025-06-30T19:59:16+00:00",
-      "disease_class": {
-        "id": 999,
-        "name": "Peach___healthy"
-      },
-      "size_compare": {
-        "current_day_px": 0,
-        "growth": -4950
-      }
-    },
-    {
-      "date": "2025-06-30 19:59:17",
-      "file_name_image": "271_2_2025-06-30_22-59-14.jpg",
-      "s3_ident": "271_2_2025-06-30_22-59-14.jpg@2025-06-30T19:59:17+00:00",
-      "disease_class": {
-        "id": 999,
-        "name": "Peach___healthy"
-      },
-      "size_compare": {
-        "current_day_px": 5629,
-        "growth": 5629
-      }
-    },
-    {
-      "date": "2025-06-30 20:24:35",
-      "file_name_image": "273_1_2025-06-30_23-24-32.jpg",
-      "s3_ident": "273_1_2025-06-30_23-24-32.jpg@2025-06-30T20:24:35+00:00",
-      "disease_class": {
-        "id": 999,
-        "name": "Corn___Common_rust"
-      },
-      "size_compare": {
-        "current_day_px": 262182,
-        "growth": 256553
-      }
-    },
-    {
-      "date": "2025-06-30 20:24:36",
-      "file_name_image": "273_2_2025-06-30_23-24-33.jpg",
-      "s3_ident": "273_2_2025-06-30_23-24-33.jpg@2025-06-30T20:24:36+00:00",
-      "disease_class": {
-        "id": 999,
-        "name": "Peach___healthy"
-      },
-      "size_compare": {
-        "current_day_px": 4528,
-        "growth": -257654
-      }
-    },
-    {
-      "date": "2025-06-30 20:49:12",
-      "file_name_image": "275_1_2025-06-30_23-49-10.jpg",
-      "s3_ident": "275_1_2025-06-30_23-49-10.jpg@2025-06-30T20:49:12+00:00",
-      "disease_class": {
-        "id": 999,
-        "name": "Corn___Common_rust"
-      },
-      "size_compare": {
-        "current_day_px": 246236,
-        "growth": 241708
-      }
-    },
-    {
-      "date": "2025-06-30 20:49:16",
-      "file_name_image": "275_2_2025-06-30_23-49-11.jpg",
-      "s3_ident": "275_2_2025-06-30_23-49-11.jpg@2025-06-30T20:49:16+00:00",
-      "disease_class": {
-        "id": 999,
-        "name": "Peach___healthy"
-      },
-      "size_compare": {
-        "current_day_px": 5720,
-        "growth": -240516
-      }
-    },
-    {
-      "date": "2025-06-30 21:10:06",
-      "file_name_image": "277_1_2025-07-01_00-10-03.jpg",
-      "s3_ident": "277_1_2025-07-01_00-10-03.jpg@2025-06-30T21:10:06+00:00",
-      "disease_class": {
-        "id": 999,
-        "name": "Corn___Common_rust"
-      },
-      "size_compare": {
-        "current_day_px": 248375,
-        "growth": 242655
-      }
-    },
-    {
-      "date": "2025-06-30 21:10:07",
-      "file_name_image": "277_2_2025-07-01_00-10-04.jpg",
-      "s3_ident": "277_2_2025-07-01_00-10-04.jpg@2025-06-30T21:10:07+00:00",
-      "disease_class": {
-        "id": 999,
-        "name": "Peach___healthy"
-      },
-      "size_compare": {
-        "current_day_px": 6603,
-        "growth": -241772
-      }
-    },
-    {
-      "date": "2025-06-30 21:30:21",
-      "file_name_image": "279_1_2025-07-01_00-30-18.jpg",
-      "s3_ident": "279_1_2025-07-01_00-30-18.jpg@2025-06-30T21:30:21+00:00",
-      "disease_class": {
-        "id": 999,
-        "name": "Corn___Common_rust"
-      },
-      "size_compare": {
-        "current_day_px": 225612,
-        "growth": 219009
-      }
-    },
-    {
-      "date": "2025-06-30 21:30:24",
-      "file_name_image": "279_2_2025-07-01_00-30-19.jpg",
-      "s3_ident": "279_2_2025-07-01_00-30-19.jpg@2025-06-30T21:30:24+00:00",
-      "disease_class": {
-        "id": 999,
-        "name": "Peach___healthy"
-      },
-      "size_compare": {
-        "current_day_px": 6007,
-        "growth": -219605
-      }
-    },
-    {
-      "date": "2025-06-30 21:43:00",
-      "file_name_image": "281_1_2025-07-01_00-42-57.jpg",
-      "s3_ident": "281_1_2025-07-01_00-42-57.jpg@2025-06-30T21:43:00+00:00",
-      "disease_class": {
-        "id": 999,
-        "name": "Corn___Common_rust"
-      },
-      "size_compare": {
-        "current_day_px": 494333,
-        "growth": 488326
-      }
-    },
-    {
-      "date": "2025-06-30 21:43:01",
-      "file_name_image": "281_2_2025-07-01_00-42-58.jpg",
-      "s3_ident": "281_2_2025-07-01_00-42-58.jpg@2025-06-30T21:43:01+00:00",
-      "disease_class": {
-        "id": 999,
-        "name": "Peach___healthy"
-      },
-      "size_compare": {
-        "current_day_px": 2657,
-        "growth": -491676
-      }
-    },
-    {
-      "date": "2025-06-30 22:22:01",
-      "file_name_image": "283_1_2025-07-01_01-21-58.jpg",
-      "s3_ident": "283_1_2025-07-01_01-21-58.jpg@2025-06-30T22:22:01+00:00",
-      "disease_class": {
-        "id": 999,
-        "name": "Apple___Black_rot"
-      },
-      "size_compare": {
-        "current_day_px": 0,
-        "growth": -2657
-      }
-    },
-    {
-      "date": "2025-06-30 22:22:02",
-      "file_name_image": "283_2_2025-07-01_01-21-59.jpg",
-      "s3_ident": "283_2_2025-07-01_01-21-59.jpg@2025-06-30T22:22:02+00:00",
-      "disease_class": {
-        "id": 999,
-        "name": "Peach___healthy"
-      },
-      "size_compare": {
-        "current_day_px": 6879,
-        "growth": 6879
-      }
-    },
-    {
-      "date": "2025-06-30 22:53:29",
-      "file_name_image": "285_1_2025-07-01_01-53-27.jpg",
-      "s3_ident": "285_1_2025-07-01_01-53-27.jpg@2025-06-30T22:53:29+00:00",
-      "disease_class": {
-        "id": 999,
-        "name": "Apple___Black_rot"
-      },
-      "size_compare": {
-        "current_day_px": 0,
-        "growth": -6879
-      }
-    },
-    {
-      "date": "2025-06-30 22:53:31",
-      "file_name_image": "285_2_2025-07-01_01-53-27.jpg",
-      "s3_ident": "285_2_2025-07-01_01-53-27.jpg@2025-06-30T22:53:31+00:00",
-      "disease_class": {
-        "id": 999,
-        "name": "Peach___healthy"
-      },
-      "size_compare": {
-        "current_day_px": 12250,
-        "growth": 12250
-      }
-    },
-    {
-      "date": "2025-06-30 23:34:09",
-      "file_name_image": "287_1_2025-07-01_02-34-06.jpg",
-      "s3_ident": "287_1_2025-07-01_02-34-06.jpg@2025-06-30T23:34:09+00:00",
-      "disease_class": {
-        "id": 999,
-        "name": "Peach___healthy"
-      },
-      "size_compare": {
-        "current_day_px": 0,
-        "growth": -12250
-      }
-    },
-    {
-      "date": "2025-06-30 23:34:10",
-      "file_name_image": "287_2_2025-07-01_02-34-07.jpg",
-      "s3_ident": "287_2_2025-07-01_02-34-07.jpg@2025-06-30T23:34:10+00:00",
-      "disease_class": {
-        "id": 999,
-        "name": "Peach___healthy"
-      },
-      "size_compare": {
-        "current_day_px": 3132,
-        "growth": 3132
-      }
-    },
-    {
-      "date": "2025-06-30 23:42:24",
-      "file_name_image": "289_1_2025-07-01_02-42-21.jpg",
-      "s3_ident": "289_1_2025-07-01_02-42-21.jpg@2025-06-30T23:42:24+00:00",
-      "disease_class": {
-        "id": 999,
-        "name": "Peach___healthy"
-      },
-      "size_compare": {
-        "current_day_px": 0,
-        "growth": -3132
-      }
-    },
-    {
-      "date": "2025-06-30 23:42:26",
-      "file_name_image": "289_2_2025-07-01_02-42-22.jpg",
-      "s3_ident": "289_2_2025-07-01_02-42-22.jpg@2025-06-30T23:42:26+00:00",
-      "disease_class": {
-        "id": 999,
-        "name": "Peach___healthy"
-      },
-      "size_compare": {
-        "current_day_px": 15296,
-        "growth": 15296
-      }
-    },
-    {
-      "date": "2025-07-01 15:40:11",
-      "file_name_image": "291_1_2025-07-01_18-40-08.jpg",
-      "s3_ident": "291_1_2025-07-01_18-40-08.jpg@2025-07-01T15:40:11+00:00",
-      "disease_class": {
-        "id": 999,
-        "name": "Peach___healthy"
-      },
-      "size_compare": {
-        "current_day_px": 10287,
-        "growth": -5009
-      }
-    },
-    {
-      "date": "2025-07-01 15:40:12",
-      "file_name_image": "291_2_2025-07-01_18-40-09.jpg",
-      "s3_ident": "291_2_2025-07-01_18-40-09.jpg@2025-07-01T15:40:12+00:00",
-      "disease_class": {
-        "id": 999,
-        "name": "Peach___healthy"
-      },
-      "size_compare": {
-        "current_day_px": 10181,
-        "growth": -106
-      }
-    },
-    {
-      "date": "2025-07-01 15:52:59",
-      "file_name_image": "293_1_2025-07-01_18-52-56.jpg",
-      "s3_ident": "293_1_2025-07-01_18-52-56.jpg@2025-07-01T15:52:59+00:00",
-      "disease_class": {
-        "id": 999,
-        "name": "Peach___healthy"
-      },
-      "size_compare": {
-        "current_day_px": 43488,
-        "growth": 33307
-      }
-    },
-    {
-      "date": "2025-07-01 15:53:01",
-      "file_name_image": "293_2_2025-07-01_18-52-57.jpg",
-      "s3_ident": "293_2_2025-07-01_18-52-57.jpg@2025-07-01T15:53:01+00:00",
-      "disease_class": {
-        "id": 999,
-        "name": "Peach___healthy"
-      },
-      "size_compare": {
-        "current_day_px": 8412,
-        "growth": -35076
-      }
-    },
-    {
-      "date": "2025-07-01 15:54:40",
-      "file_name_image": "295_1_2025-07-01_18-54-37.jpg",
-      "s3_ident": "295_1_2025-07-01_18-54-37.jpg@2025-07-01T15:54:40+00:00",
-      "disease_class": {
-        "id": 999,
-        "name": "Peach___healthy"
-      },
-      "size_compare": {
-        "current_day_px": 162963,
-        "growth": 154551
-      }
-    },
-    {
-      "date": "2025-07-01 15:54:41",
-      "file_name_image": "295_2_2025-07-01_18-54-38.jpg",
-      "s3_ident": "295_2_2025-07-01_18-54-38.jpg@2025-07-01T15:54:41+00:00",
-      "disease_class": {
-        "id": 999,
-        "name": "Peach___healthy"
-      },
-      "size_compare": {
-        "current_day_px": 9756,
-        "growth": 9756
-      }
-    },
-    {
-      "date": "2025-07-01 16:12:35",
-      "file_name_image": "297_1_2025-07-01_19-12-32.jpg",
-      "s3_ident": "297_1_2025-07-01_19-12-32.jpg@2025-07-01T16:12:35+00:00",
-      "disease_class": {
-        "id": 999,
-        "name": "Peach___healthy"
-      },
-      "size_compare": {
-        "current_day_px": 2107,
-        "growth": -7649
-      }
-    },
-    {
-      "date": "2025-07-01 16:12:37",
-      "file_name_image": "297_2_2025-07-01_19-12-33.jpg",
-      "s3_ident": "297_2_2025-07-01_19-12-33.jpg@2025-07-01T16:12:37+00:00",
-      "disease_class": {
-        "id": 999,
-        "name": "Peach___healthy"
-      },
-      "size_compare": {
-        "current_day_px": 10152,
-        "growth": 8045
-      }
-    },
-    {
-      "date": "2025-07-01 16:27:27",
-      "file_name_image": "299_1_2025-07-01_19-27-24.jpg",
-      "s3_ident": "299_1_2025-07-01_19-27-24.jpg@2025-07-01T16:27:27+00:00",
-      "disease_class": {
-        "id": 999,
-        "name": "Apple___Black_rot"
-      },
-      "size_compare": {
-        "current_day_px": 905,
-        "growth": -9247
-      }
-    },
-    {
-      "date": "2025-07-01 16:27:29",
-      "file_name_image": "299_2_2025-07-01_19-27-25.jpg",
-      "s3_ident": "299_2_2025-07-01_19-27-25.jpg@2025-07-01T16:27:29+00:00",
-      "disease_class": {
-        "id": 999,
-        "name": "Peach___healthy"
-      },
-      "size_compare": {
-        "current_day_px": 13793,
-        "growth": 12888
-      }
-    },
-    {
-      "date": "2025-07-01 19:36:16",
-      "file_name_image": "301_1_2025-07-01_22-36-13.jpg",
-      "s3_ident": "301_1_2025-07-01_22-36-13.jpg@2025-07-01T19:36:16+00:00",
-      "disease_class": {
-        "id": 999,
-        "name": "Peach___healthy"
-      },
-      "size_compare": {
-        "current_day_px": 168781,
-        "growth": 154988
-      }
-    },
-    {
-      "date": "2025-07-01 19:36:18",
-      "file_name_image": "301_2_2025-07-01_22-36-14.jpg",
-      "s3_ident": "301_2_2025-07-01_22-36-14.jpg@2025-07-01T19:36:18+00:00",
-      "disease_class": {
-        "id": 999,
-        "name": "Peach___healthy"
-      },
-      "size_compare": {
-        "current_day_px": 7430,
-        "growth": -161351
-      }
+      "images": [
+        {
+          "file_name_image": "353_1_2025-07-02_22-39-11.jpg",
+          "date": "2025-07-02 19:39:13",
+          "s3_ident": "353_1_2025-07-02_22-39-11.jpg@2025-07-02T19:39:13+00:00",
+          "current_day_px": 0,
+          "growth": 0,
+          "growth_pourcentage": 0.0
+        },
+        {
+          "file_name_image": "353_2_2025-07-02_22-39-11.jpg",
+          "date": "2025-07-02 19:39:15",
+          "s3_ident": "353_2_2025-07-02_22-39-11.jpg@2025-07-02T19:39:15+00:00",
+          "current_day_px": 0,
+          "growth": 0,
+          "growth_pourcentage": 0.0
+        }
+      ]
     }
   ]
 }

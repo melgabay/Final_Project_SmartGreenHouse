@@ -1,7 +1,7 @@
 import paho.mqtt.client as mqtt
 
 # MQTT configuration for subscribing to plant growth updates
-HOST = "33ea71e0e0034036b86bee133525b810.s1.eu.hivemq.cloud"
+HOST = "smartgreen-884cb6eb.a03.euc1.aws.hivemq.cloud"
 PORT = 8883
 USERNAME = "SmartGreenHouse"
 PASSWORD = "SmartGreenHouse2025"
