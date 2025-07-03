@@ -89,20 +89,19 @@ def _save_history_atomic(plant: str, record: dict):
     # 0️⃣ – déjà enregistré ? ───────────────────────────────────────────
     for blk in hist[plant]:
         if any(img["file_name_image"] == record["file_name_image"] for img in blk["images"]):
-            return                      # déjà dans le JSON
+            return  # déjà dans le JSON
 
     # 1️⃣ – analyse stricte du nom de fichier *_1_* ou *_2_* ────────────
-    stem = Path(record["file_name_image"]).stem            # ex. "347_1_2025-07-02"
+    stem = Path(record["file_name_image"]).stem
     m = re.match(r"^(\d+)_([12])_(.+)", stem)
     if not m:
-        return  # nom hors format ==> on ignore
-    group_id, suffix = m.group(1), m.group(2)              # "347", "1" ou "2"
+        return
+    group_id, suffix = m.group(1), m.group(2)
 
-    # 2️⃣ – cache en mémoire des paires en attente ─────────────────────
+    # 2️⃣ – cache mémoire des paires ────────────────────────────────────
     pending = getattr(_save_history_atomic, "_pending", {})
-    _save_history_atomic._pending = pending                # persiste entre appels
+    _save_history_atomic._pending = pending
 
-    # si on reçoit un nouveau *_1 alors qu’un autre *_1 est orphelin → on garde le + récent
     if suffix == "1":
         def _get_suffix(fname):
             mm = re.match(r"(.+)_([12])(?:_[^_]*)?$", Path(fname).stem)
@@ -114,61 +113,49 @@ def _save_history_atomic(plant: str, record: dict):
 
     pending.setdefault(group_id, []).append(record)
 
-    # 3️⃣ – attendre la paire complète ────────────────────────────────
+    # 3️⃣ – attendre la paire ───────────────────────────────────────────
     if len(pending[group_id]) < 2:
-        return                                  # pas encore la paire
+        return
 
     images = sorted(pending[group_id], key=lambda r: r["file_name_image"])
-    del pending[group_id]                       # paire consommée
+    del pending[group_id]
 
-    # ─── 4️⃣  calculs globaux et individuels  ────────────────────────────
+    # 4️⃣ – calculs globaux et individuels ─────────────────────────────
     global_current_px = sum(img["current_day_px"] for img in images)
 
     previous_block = hist[plant][-1] if hist[plant] else None
     previous_global_px = previous_block["global_current_px"] if previous_block else None
     difference_global_growth = 0 if previous_global_px is None else global_current_px - previous_global_px
 
-    # ➜ pct maintenant comparé au Δ du bloc précédent (si non nul)
     difference_global_growth_pct = (
         0.0 if previous_global_px in (None, 0)
         else round(100 * difference_global_growth / previous_global_px, 2)
     )
 
-    # ───  Calcul GROWTH par image : on compare suffixe 1→1 et 2→2 ───────
     for img in images:
-        suffix_cur = Path(img["file_name_image"]).stem.split("_")[1]  # "1" ou "2"
+        suffix_cur = Path(img["file_name_image"]).stem.split("_")[1]
         prev_px = None
-
-        for blk in reversed(hist[plant]):  # blocs précédents seulement
+        for blk in reversed(hist[plant]):
             for past in blk["images"]:
                 suffix_past = Path(past["file_name_image"]).stem.split("_")[1]
-                if suffix_past == suffix_cur:  # même suffixe => même position dans la paire
-                    prev_px = past["current_day_px"];
+                if suffix_past == suffix_cur:
+                    prev_px = past["current_day_px"]
                     break
             if prev_px is not None:
                 break
-
         growth = 0 if prev_px is None else img["current_day_px"] - prev_px
         pct = 0.0 if prev_px in (None, 0) else round(100 * growth / prev_px, 2)
-        img["growth"], img["growth_pourcentage"] = growth, pct
+        img["growth"] = growth
+        img["growth_pourcentage"] = pct
 
-    # 5️⃣ – écriture JSON + S3 + MQTT ─────────────────────────────────
+    # 5️⃣ – écriture JSON + S3 (bloc “canonique”) ────────────────────────
     block = {
-        "global_current_px"            : global_current_px,
-        "difference_global_growth"     : difference_global_growth,
-        "difference_global_growth_pct" : difference_global_growth_pct,
-        "id"                           : FORCED_ID,
-        "disease_class"                : images[0]["disease_class"],
-        "images"                       : [
-            {
-                "file_name_image"   : img["file_name_image"],
-                "date"              : img["date"],
-                "s3_ident"          : img["s3_ident"],
-                "current_day_px"    : img["current_day_px"],
-                "growth"            : img["growth"],
-                "growth_pourcentage": img["growth_pourcentage"]
-            } for img in images
-        ]
+        "global_current_px": global_current_px,
+        "difference_global_growth": difference_global_growth,
+        "difference_global_growth_pct": difference_global_growth_pct,
+        "id": FORCED_ID,
+        "disease_class": images[0]["disease_class"],
+        "images": images  # <-- garde 'file_name_image'
     }
 
     hist[plant].append(block)
@@ -176,14 +163,25 @@ def _save_history_atomic(plant: str, record: dict):
         json.dump(hist, f, indent=2, ensure_ascii=False)
     s3.upload_file(LOCAL_JSON, BUCKET, JSON_S3_KEY)
 
-    for img in images:
-        _publish_mqtt({
-            "plant_name"   : plant,
-            "disease_class": images[0]["disease_class"],
-            **img
-        })
+    # 6️⃣ – version “MQTT friendly” avec noms numérotés ───────────────────
+    payload_images = []
+    for idx, img in enumerate(images, start=1):
+        tmp = img.copy()  # on ne touche pas l’original
+        tmp[f"file_name_image{idx}"] = tmp.pop("file_name_image")
+        payload_images.append(tmp)
+
+    mqtt_block = {**block, "images": payload_images}
+
+    _publish_mqtt({
+        "plant_name": plant,
+        **mqtt_block
+    })
+
 
 # ──────────────────── Public entry point ─────────────────────────
+IMG_DIR = Path(__file__).parent / "img"   # => python/img
+IMG_DIR.mkdir(parents=True, exist_ok=True)
+
 def analyse_one_s3_key(key: str, *, last_modified=None, crop=contour.DEFAULT_CROP):
     ident = f"{key}@{(last_modified.isoformat() if last_modified else 'NA')}"
 
@@ -192,17 +190,18 @@ def analyse_one_s3_key(key: str, *, last_modified=None, crop=contour.DEFAULT_CRO
             return {"skipped": ident}
         _ALREADY_PROCESSED.add(ident)
 
-    fname = os.path.basename(key)
-    s3.download_file(BUCKET, key, fname)
+    fname       = Path(key).name                     # basename S3
+    local_path  = IMG_DIR / fname                    # python/img/…
+    s3.download_file(BUCKET, key, str(local_path))   # ⬇️ vers python/img
 
-    surface = contour.process_and_save(fname, crop=crop)
+    surface = contour.process_and_save(str(local_path), crop=crop)
     area_px = surface["area_px"]
 
-    disease_class, _ = classify_image(fname)
+    disease_class, _ = classify_image(str(local_path))
 
     record = {
         "date": last_modified.strftime("%Y-%m-%d %H:%M:%S"),
-        "file_name_image": key,
+        "file_name_image": key,       # <— on garde la clé S3 inchangée
         "s3_ident": ident,
         "current_day_px": area_px,
         "disease_class": disease_class

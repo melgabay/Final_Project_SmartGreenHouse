@@ -1521,6 +1521,78 @@
           "growth_pourcentage": 0.0
         }
       ]
+    },
+    {
+      "global_current_px": 720467,
+      "difference_global_growth": 720467,
+      "difference_global_growth_pct": 0.0,
+      "id": 999,
+      "disease_class": {
+        "id": 999,
+        "name": "Tomato___Early_blight"
+      },
+      "images": [
+        {
+          "date": "2025-07-03 17:14:54",
+          "file_name_image": "1000_1_2025_07_03_08_47_42.jpg",
+          "s3_ident": "1000_1_2025_07_03_08_47_42.jpg@2025-07-03T17:14:54+00:00",
+          "current_day_px": 413295,
+          "disease_class": {
+            "id": 999,
+            "name": "Tomato___Early_blight"
+          },
+          "growth": 413295,
+          "growth_pourcentage": 0.0
+        },
+        {
+          "date": "2025-07-03 17:14:55",
+          "file_name_image": "1000_2_2025_07_03_08_47_42.jpg",
+          "s3_ident": "1000_2_2025_07_03_08_47_42.jpg@2025-07-03T17:14:55+00:00",
+          "current_day_px": 307172,
+          "disease_class": {
+            "id": 999,
+            "name": "Apple___Cedar_apple_rust"
+          },
+          "growth": 307172,
+          "growth_pourcentage": 0.0
+        }
+      ]
+    },
+    {
+      "global_current_px": 448633,
+      "difference_global_growth": -271834,
+      "difference_global_growth_pct": -37.73,
+      "id": 999,
+      "disease_class": {
+        "id": 999,
+        "name": "Apple___Cedar_apple_rust"
+      },
+      "images": [
+        {
+          "date": "2025-07-03 17:14:55",
+          "file_name_image": "1001_1_2025_07_03_08_47_42.jpg",
+          "s3_ident": "1001_1_2025_07_03_08_47_42.jpg@2025-07-03T17:14:55+00:00",
+          "current_day_px": 237981,
+          "disease_class": {
+            "id": 999,
+            "name": "Apple___Cedar_apple_rust"
+          },
+          "growth": -175314,
+          "growth_pourcentage": -42.42
+        },
+        {
+          "date": "2025-07-03 17:14:56",
+          "file_name_image": "1001_2_2025_07_03_08_47_42.jpg",
+          "s3_ident": "1001_2_2025_07_03_08_47_42.jpg@2025-07-03T17:14:56+00:00",
+          "current_day_px": 210652,
+          "disease_class": {
+            "id": 999,
+            "name": "Apple___Cedar_apple_rust"
+          },
+          "growth": -96520,
+          "growth_pourcentage": -31.42
+        }
+      ]
     }
   ]
 }
