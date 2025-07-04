@@ -1,7 +1,38 @@
-venv/
-*.dylib
-*.h5
-.DS_Store
-node_modules/
+# Ignore Python bytecode
 __pycache__/
+*.py[cod]
+
+# Ignore virtual environments
+venv/
+.env/
+
+# Ignore model files and large binaries (adapt as needed)
+*.h5
+*.tflite
+*.onnx
+
+# Ignore logs and temporary files
+*.log
+*.tmp
+
+# Ignore Jupyter notebooks checkpoints
 .ipynb_checkpoints/
+
+# Ignore macOS files
+.DS_Store
+
+# Ignore system thumbnails
+Thumbs.db
+
+# Ignore all image files in python/ folder
+python/*.jpg
+python/*.jpeg
+python/*.png
+python/*.JPG
+python/*.JPEG
+python/*.PNG
+
+# Ignore local test outputs
+output/
+*.mp4
+*.avi
