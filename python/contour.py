@@ -21,7 +21,7 @@ Path(OVERLAY_DIR).mkdir(exist_ok=True)
 # Default parameters (modifiable on call)
 DEFAULT_CROP   : Optional[Tuple[int, int, int, int]] = None  # (x1, y1, x2, y2)
 DEFAULT_ALPHA  : float = 1.4   # contraste
-DEFAULT_BETA   : int   = 40    # luminosité
+DEFAULT_BETA   : int   = 40    # luminosity
 DEFAULT_LOWER_GREEN = np.array([33, 85, 60])
 DEFAULT_UPPER_GREEN = np.array([90, 255, 255])
 MIN_AREA_THRESHOLD = 300
