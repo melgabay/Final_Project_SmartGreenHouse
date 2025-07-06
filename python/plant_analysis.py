@@ -96,7 +96,7 @@ def _save_history_atomic(plant: str, record: dict):
 
     # 2. Parse file name to get group id and side number (1 or 2)
     stem = Path(record["file_name_image"]).stem
-    m = re.match(r"^(\d+)_([12])_(.+)", stem)
+    m = re.match(r"^(\d+)_([12])(?:_(.+))?$", stem)
     if not m:
         return
     group_id, suffix = m.group(1), m.group(2)

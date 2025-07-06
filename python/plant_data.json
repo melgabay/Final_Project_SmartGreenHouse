@@ -1593,6 +1593,78 @@
           "growth_pourcentage": 39.26
         }
       ]
+    },
+    {
+      "global_current_px": 448691,
+      "difference_global_growth": -358735,
+      "difference_global_growth_pct": -44.43,
+      "id": 999,
+      "disease_class": {
+        "id": 999,
+        "name": "Apple___Cedar_apple_rust"
+      },
+      "images": [
+        {
+          "date": "2025-07-06 15:46:36",
+          "file_name_image": "1000_1.jpg",
+          "s3_ident": "1000_1.jpg@2025-07-06T15:46:36+00:00",
+          "current_day_px": 238016,
+          "disease_class": {
+            "id": 999,
+            "name": "Apple___Cedar_apple_rust"
+          },
+          "growth": -230213,
+          "growth_pourcentage": -49.17
+        },
+        {
+          "date": "2025-07-06 15:46:37",
+          "file_name_image": "1000_2.jpg",
+          "s3_ident": "1000_2.jpg@2025-07-06T15:46:37+00:00",
+          "current_day_px": 210675,
+          "disease_class": {
+            "id": 999,
+            "name": "Apple___Cedar_apple_rust"
+          },
+          "growth": -128522,
+          "growth_pourcentage": -37.89
+        }
+      ]
+    },
+    {
+      "global_current_px": 720535,
+      "difference_global_growth": 271844,
+      "difference_global_growth_pct": 60.59,
+      "id": 999,
+      "disease_class": {
+        "id": 999,
+        "name": "Tomato___Early_blight"
+      },
+      "images": [
+        {
+          "date": "2025-07-06 15:46:37",
+          "file_name_image": "1001_1.jpg",
+          "s3_ident": "1001_1.jpg@2025-07-06T15:46:37+00:00",
+          "current_day_px": 413295,
+          "disease_class": {
+            "id": 999,
+            "name": "Tomato___Early_blight"
+          },
+          "growth": 175279,
+          "growth_pourcentage": 73.64
+        },
+        {
+          "date": "2025-07-06 15:46:38",
+          "file_name_image": "1001_2.jpg",
+          "s3_ident": "1001_2.jpg@2025-07-06T15:46:38+00:00",
+          "current_day_px": 307240,
+          "disease_class": {
+            "id": 999,
+            "name": "Apple___Cedar_apple_rust"
+          },
+          "growth": 96565,
+          "growth_pourcentage": 45.84
+        }
+      ]
     }
   ]
 }
