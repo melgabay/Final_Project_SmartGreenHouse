@@ -3,7 +3,6 @@
 **IoT-based smart greenhouse system** for sensor monitoring, actuator control, data visualization, and **plant image analysis** (growth tracking and disease classification). Automated monitoring and control system for optimal plant growth.
 
 ## Overview
-Overview
 
 The Smart Greenhouse is an IoT-based system that automates and optimizes the environmental conditions of a greenhouse. It utilizes a Raspberry Pi 5 to monitor temperature, humidity, soil moisture, and light levels while controlling irrigation, ventilation, and lighting accordingly.
 
